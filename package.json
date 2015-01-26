@@ -3,7 +3,7 @@
   "description": "Personal website for Benjamin Cook.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/blcook223/bencook.info.git",
+    "url": "git://github.com/blcook223/bencook.info.git"
   },
   "devDependencies": {
     "apache-server-configs": "^2.7.1",
