@@ -1,0 +1,52 @@
+.navbar {
+  border: none;
+  background-color: $secondary-color;
+  border-radius: 0;
+  margin-bottom: 10px;
+
+  .navbar-toggle {
+    border: none;
+
+    &:hover, &:focus {
+      background-color: transparent;
+
+      span[class*="icon"] {
+        background-color: $highlight-color;
+      }
+    }
+
+    span[class*="icon"] {
+      background-color: $primary-color;
+    }
+  }
+
+  .navbar-nav {
+
+    > li {
+
+      > a {
+        color: $primary-color;
+
+        &:hover, &:focus {
+          color: $highlight-color;
+        }
+      }
+
+      &.active > a {
+        color: white;
+        background-color: $complementary-color;
+
+        &:hover, &:focus {
+          color: $highlight-color;
+          background-color: $complementary-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .navbar-collapse {
+      overflow-x: hidden;
+    }
+  }
+}

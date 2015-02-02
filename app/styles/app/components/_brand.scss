@@ -2,13 +2,13 @@
   text-transform: capitalize;
 
   .title {
-    color: #F5F5DC;
+    color: $primary-color;
     font-size: 20px;
     line-height: 1;
     margin: 0 5px;
 
     &:before, &:after {
-      color: #FF7600;
+      color: $highlight-color;
       margin: 0 5px;
       position: relative;
     }

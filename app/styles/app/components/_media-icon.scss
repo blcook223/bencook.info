@@ -1,0 +1,13 @@
+.media-icon-group {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .media-icon {
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

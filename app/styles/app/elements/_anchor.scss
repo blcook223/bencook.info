@@ -1,0 +1,9 @@
+a {
+  color: $highlight-color;
+}
+a:active, a:hover, a:focus {
+  color: $highlight-color;
+}
+a:visited {
+  color: $tertiary-color;
+}

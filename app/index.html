@@ -24,58 +24,74 @@
     <div class="container">
 
       <header class="header">
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand brand" href="#">
-                <h1 class="title">benjamin cook</h1>
-              </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="navbarCollapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">home <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">resume</a></li>
-                <li><a href="#">contact</a></li>
-              </ul>
-            </div>
-          </div><!-- /.container-fluid -->
-        </nav>
+        <div class="row">
+          <div class="col-xs-12">
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand brand" href="index.html">
+                    <h1 class="title">benjamin cook</h1>
+                  </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="navbarCollapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="portfolio.html">portfolio</a></li>
+                    <li><a href="resume.html">resume</a></li>
+                  </ul>
+                </div>
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        </div>
       </header>
 
       <section class="body">
-
-        <section class="upper-torso">
-          <div class="row">
-            <div class="col-xs-4">
-              <figure class="primary-figure">
-                <img class="figure-img img-responsive" src="images/professional_photo.jpg" alt="Professional photo of Benjamin Cook">
-                <figcaption class="photo-credit">Ryan Miller</figcaption>
-              </figure>
-            </div>
-
-            <div class="col-xs-8">
-              <div class="jumbotron">
-                <h1 class="title">Hello</h1>
-                <p>My name is Benjamin Cook, and I build websites.</p>
-              </div>
+        <div class="row">
+          <div class="hidden-xs hidden-sm col-md-4">
+            <figure class="primary-figure">
+              <img class="img-responsive" src="images/professional_photo.jpg" alt="Professional photo of Benjamin Cook">
+              <figcaption class="photo-credit">Ryan Miller</figcaption>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-8">
+            <div class="jumbotron">
+              <h1>Hello.</h1>
+              <p>My name is Benjamin Cook, and I build web applications.</p>
+              <p>I live in Austin, Texas and work for the <a href="http://www.engr.utexas.edu/fic">Faculty Innovation Center</a> at the University of Texas, Cockrell School of Engineering. I also develop websites for individuals and small businesses.</p>
+              <p>Excellent customer service is my goal, and my clients can <a href="">speak to the quality of my work</a>.</p>
+              <p>I have an <a href="">amazing family</a>, and I love <a href="">all things ancient</a>.</p>
+              <button class="btn btn-primary">Learn more about me</button>
             </div>
           </div>
-        </section><!-- /.upper-torso -->
-
-        <section class="lower-torso">
-        </section><!-- /.lower-torso -->
-
+        </div>
       </section><!-- /.body -->
 
       <footer class="footer">
+        <div class="row">
+          <div class="col-sm-push-8 col-sm-4">
+            <div class="footer-sidebar">
+              <div class="media-icon-group">
+                <a class="media-icon" href="https://github.com/blcook223"><img title="GitHub" src="images/github-32.png" alt="GitHub icon"></a>
+                <a class="media-icon" href="http://stackoverflow.com/users/4513644/blcook223"><img title="Stack Overflow" src="images/stackoverflow-32.png" alt="Stack Overflow icon"></a>
+                <a class="media-icon" href="http://www.linkedin.com/in/benjaminleecook/"><img title="Linkedin" src="images/linkedin-32.png" alt="Linkedin icon"></a>
+                <a class="media-icon" href="mailto:benjamin.l.cook@gmail.com" alt="email icon"><img title="Email" src="images/email-32.png"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-pull-4 col-sm-8">
+            <div class="footer-main">
+              <p class="copyright">This website is an open-source project by Benjamin Cook.</p>
+            </div>
+          </div>
+        </div>
       </footer>
 
     </div><!-- /.container -->
