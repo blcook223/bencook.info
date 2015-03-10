@@ -1,0 +1,10 @@
+.btn-primary {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border-color: $complementary-color;
+
+  &:hover, &:focus, &:active, &.active {
+    color: $primary-color;
+    background-color: darken($secondary-color, 10%);
+  }
+}

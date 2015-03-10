@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "modernizr": "~2.8.2",
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "flat-ui": "~2.2.2"
   }
 }

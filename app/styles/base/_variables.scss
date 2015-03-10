@@ -1,11 +1,16 @@
 // colors
 
-$primary-color: #F5F5DC;
-$secondary-color: #006363;
-$tertiary-color: #A40004;
-$highlight-color: #FF7600;
-$complementary-color: #2F4F4F;
+$primary-color: #FFFFFF;
+$secondary-color: #16A085;
+$tertiary-color: #C0392B;
+$highlight-color: #E67E22;
+$complementary-color: #2C3E50;
 
 // layout
 
 $footer-height: 52px;
+
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;

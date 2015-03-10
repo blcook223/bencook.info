@@ -1,0 +1,39 @@
+.footer {
+  height: $footer-height;
+  color: $primary-color;
+  position: relative;
+}
+
+footer {
+
+  .footer-main {
+    @extend .footer;
+
+    background-color: $secondary-color;
+    @media (min-width: $screen-sm-min) {
+      margin-right: -15px;
+    }
+  }
+
+  .footer-sidebar {
+    @extend .footer;
+
+    background-color: $complementary-color;
+
+    @media (min-width: $screen-sm-min) {
+      margin-left: -15px;
+    }
+  }
+
+  .legal {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+
+    > p {
+      font-size: 10px;
+      line-height: 1.2em;
+      margin-bottom: 0;
+    }
+  }
+}

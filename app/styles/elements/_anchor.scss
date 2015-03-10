@@ -1,0 +1,10 @@
+a {
+  color: $tertiary-color;
+}
+a:active, a:hover, a:focus {
+  color: $tertiary-color;
+  text-decoration: underline;
+}
+a:visited {
+  color: $highlight-color;
+}

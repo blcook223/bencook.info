@@ -1,0 +1,27 @@
+.brand {
+  text-transform: capitalize;
+  padding-left: 9px;
+  padding-right: 9px;
+
+  .title {
+    color: $primary-color;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: bold;
+    margin: 0 5px;
+
+    &:before, &:after {
+      color: $highlight-color;
+      margin: 0 5px;
+      position: relative;
+    }
+
+    &:before {
+      content: "{{";
+    }
+
+    &:after {
+      content: "}}";
+    }
+  }
+}
