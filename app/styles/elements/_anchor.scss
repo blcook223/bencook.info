@@ -1,10 +1,12 @@
-a {
+a:not(.btn) {
   color: $tertiary-color;
-}
-a:active, a:hover, a:focus {
-  color: $tertiary-color;
-  text-decoration: underline;
-}
-a:visited {
-  color: $highlight-color;
+
+  &:active, &:hover, &:focus {
+    color: $tertiary-color;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $highlight-color;
+  }
 }

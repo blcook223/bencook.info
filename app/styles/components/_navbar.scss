@@ -9,6 +9,9 @@
 
     &:hover, &:focus {
       background-color: transparent;
+      &:before {
+        color: lighten($complementary-color, 20%);
+      }
 
       span[class*="icon"] {
         background-color: $highlight-color;

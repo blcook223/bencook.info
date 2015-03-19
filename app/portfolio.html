@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>About - Benjamin Cook</title>
+    <title>Portfolio - Benjamin Cook</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -10,6 +10,8 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css" />
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -32,9 +34,6 @@
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand brand" href="index.html">
                     <h1 class="title">benjamin cook</h1>
@@ -43,8 +42,8 @@
                 <div class="collapse navbar-collapse navbar-right" id="navbarCollapse">
                   <ul class="nav navbar-nav">
                     <li><a href="index.html">home</a></li>
-                    <li class="active"><a href="about.html">about <span class="sr-only">(current)</span></a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li class="active"><a href="portfolio.html">portfolio <span class="sr-only">(current)</span></a></li>
                     <li><a href="resume.html">resume</a></li>
                   </ul>
                 </div>
@@ -56,38 +55,153 @@
 
       <section class="body">
 
-        <section class="upper-torso">
-        </section><!-- /.upper-torso -->
+        <h2>Selected Software Projects</h2>
 
-        <section class="lower-torso">
-          <section class="portfolio-entry">
-            singularity snippets?
-          </section>
-          <section class="portfolio-entry">
-            dtra
-          </section>
-          <section class="portfolio-entry">
-            website
-          </section>
-          <section class="portfolio-entry">
-            tuition calculator
-          </section>
-          <section class="portfolio-entry">
-            scholarship system
-          </section>
-          <section class="portfolio-entry">
-            staff training central
-          </section>
-          <section class="portfolio-entry">
-            giving voice to values
-          </section>
-          <section class="portfolio-entry">
-            tic tac toe
-          </section>
-          <section class="portfolio-entry">
-            contributions to open-source projects? (sigma.js, etc.)
-          </section>
-        </section><!-- /.lower-torso -->
+        <section class="featurette row">
+          <div class="col-xs-12 col-sm-7">
+            <h3>CSE Sites</h3>
+            <p><span class="info-label">When:</span> February 2015-Present</p>
+            <p><span class="info-label">Contribution:</span> System administrator</p>
+            <p><span class="info-label">Technologies:</span> Git, PHP, Drupal, MySQL, Linux</p>
+            <p><span class="info-label">Description:</span> CSE sites is an <a href="">OpenScholar</a> Drupal installation maintained by my office in the Cockrell School of Engineering. As the primary system administrator for this project, I assist School of Engineering faculty in designing and building new sites, apply security updates to the system, maintain and back-up the MySQL database, patch various Drupal components, and educate users about the system.</p>
+            <a class="btn btn-primary" href="http://faculty.engr.utexas.edu/">Explore CSE Sites</a>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/csesites_screenshot_1.png" alt="screenshot of CSE Sites homepage featuring a brief description of the website and a set of links to tenant websites for various faculty members and research groups">
+            </figure>
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/csesites_screenshot_2.png" alt="screenshot of website for the CESO Group featuring a variety of graphs and a paragraph about the group's mission">
+            </figure>
+          </div>
+        </section>
+
+        <section class="featurette row">
+          <div class="col-xs-12 col-sm-push-5 col-sm-7">
+            <h3>DummyData</h3>
+            <p><span class="info-label">When:</span> January 2015-Present</p>
+            <p><span class="info-label">Contribution:</span> Full stack developer</p>
+            <p><span class="info-label">Technologies:</span> Git, Python</p>
+            <p><span class="info-label">Description:</span> DummyData is a plugin for <a href="https://www.sublimetext.com/">Sublime Text</a> that I am developing. The plugin facilitates quickly generating mock or dummy JSON files with random data based on a user-defined data model.</p>
+            <a class="btn btn-primary" href="https://github.com/blcook223/DummyData">Browse the code on GitHub</a>
+          </div>
+          <div class="col-xs-12 col-sm-pull-7 col-sm-5">
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/dd_screenshot_1.png" alt="screenshot of Sublime Text text editor showing the 'DummyData: New Model' and 'DummyData: Generate DummyData' commands in the command palette">
+            </figure>
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/dd_screenshot_2.png" alt="screenshot of Sublime Text text editor showing a JSON file with randomly generated data">
+            </figure>
+          </div>
+        </section>
+
+        <section class="featurette row">
+          <div class="col-xs-12 col-sm-7">
+            <h3>Surety BioEvent App</h3>
+            <p><span class="info-label">When:</span> November 2014-March 2015</p>
+            <p><span class="info-label">Contribution:</span> Front-end developer</p>
+            <p><span class="info-label">Technologies:</span> Git, HTML5, Modernizr, CSS3, Bootstrap, Sass, JavaScript, jQuery, Grunt</p>
+            <p><span class="info-label">Description:</span> The Surety BioEvent App allows public health analysts to monitor social media to gather information about ongoing, infectious disease outbreaks. The Python back-end scrapes various online social media outlets and organizes the collected data according to geography, time, and interconnected relationships. The web application allows analysts to explore raw data as well as to visualize the application of various filters to the data.</p>
+            <button class="btn btn-primary">See the website in action</button>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/surety_screenshot_1.png" alt="screenshot of Surety BioEvent App time series data webpage featuring a set of checkbox controls, a time series graph, a scatter plot, a stacked bar graph, and sample data">
+            </figure>
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/surety_screenshot_2.png" alt="screenshot of Surety BioEvent App network data webpage featuring radio controls, a network graph of nodes of different sizes and colors, and tabular network data">
+            </figure>
+          </div>
+        </section>
+
+        <section class="featurette row">
+          <div class="col-xs-12 col-sm-push-5 col-sm-7">
+            <h3>Longhorn Fixed Tuition Calculator</h3>
+            <p><span class="info-label">When:</span> May 2014-August 2014</p>
+            <p><span class="info-label">Contribution:</span> Full stack developer</p>
+            <p><span class="info-label">Technologies:</span> Balsamiq Mockups, SVN, Vagrant, Python, Django, Oracle, XHTML, CSS, Bootstrap, JavaScript, jQuery</p>
+            <p><span class="info-label">Description:</span> The Longhorn Fixed Tuition Calculator was an integral part of an initiative at the University of Texas to offer incoming students the option to pay tuition at a fixed rate for the course of their studies. The publicly accessible page allows students and their parents to compare tuition rate plans for any school and major open to incoming freshmen and transfer students and to compare current rates to rates in previous semesters dating back to the beginning of the program.</p>
+            <a class="btn btn-primary" href="https://utdirect.utexas.edu/apps/studentfinancials/fixedtuition/nlogon/calculator/">Visit the webpage</a>
+          </div>
+          <div class="col-xs-12 col-sm-pull-7 col-sm-5">
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/calculator_screenshot_2.jpg" alt="screenshot of Longhorn Fixed Tuition Calculator webpage with a single, empty drop-down select control and disclaimer text about the calculator">
+            </figure>
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/calculator_screenshot_1.jpg" alt="screenshot of Longhorn Fixed Tuition Calculator webpage showing three drop-down select controls with a selected semester, school, and major and table displaying various tuition rates for the selected options">
+            </figure>
+          </div>
+        </section>
+
+        <section class="featurette row">
+          <div class="col-xs-12 col-sm-7">
+            <h3>Staff Training Central</h3>
+            <p><span class="info-label">When:</span> November 2013-April 2014</p>
+            <p><span class="info-label">Contribution:</span> Full stack developer</p>
+            <p><span class="info-label">Technologies:</span> SVN, Vagrant, Python, Django, Software AG Natural and Adabas, XHTML, CSS, JavaScript</p>
+            <p><span class="info-label">Description:</span> I built Staff Training Central as the capstone project of a six-month, on-the-job software development training program offered by the University of Texas Information Technology Services. The fully functional system allows UT staff members to view, enroll in, and withdraw from fictional training classes. It also permits administrative users to create, modify, and delete individual classes as well as perform some bulk class update functions.</p>
+            <a class="btn btn-primary" href="">Learn about my education</a>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/stc_screenshot_1.jpg" alt="screenshot of Staff Training Central homepage showing options to search for classes by unique number or course ID, a table of upcoming classes, and a sidebar of news items">
+            </figure>
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/stc_screenshot_2.jpg" alt="screenshot of Staff Training Central create class listing page showing a form in which the user can enter the time, date, and other information for a class listing">
+            </figure>
+          </div>
+        </section>
+
+        <section class="featurette row">
+          <div class="col-xs-12 col-sm-push-5 col-sm-7">
+            <h3>Giving Voice to Values</h3>
+            <p><span class="info-label">When:</span> June 2013-August 2013</p>
+            <p><span class="info-label">Contribution:</span> Copy writer and editor</p>
+            <p><span class="info-label">Technologies:</span> Atlassian Confluence, Microsoft Office</p>
+            <p><span class="info-label">Description:</span> Giving Voice to Values is a multi-media website offering a variety of teaching resources based on the approach to behavioral ethics developed by Mary Gentile. While not a software development project, my work on the Giving Voice to Values website showcases my writing and editing skills, particularly for the web. Prior to entering the IT field, I pursued a career in professional writing and editing and authored or edited a number of published works.</p>
+            <a class="btn btn-primary" href="">See my publications</a>
+            <a class="btn btn-primary" href="http://ethicsunwrapped.utexas.edu/series/giving-voice-to-values">Visit the website</a>
+          </div>
+          <div class="col-xs-12 col-sm-pull-7 col-sm-5">
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/gvv_screenshot_1.png" alt="screenshot of Giving Voice to Values homepage showing several videos, social media links, and a navigation menu in the right sidebar">
+            </figure>
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/gvv_screenshot_2.png" alt="screenshot of Giving Voice to Values webpage showing text under the headings 'Giving Voice to Values Video Series' and 'The G.V.V. Approach'">
+            </figure>
+          </div>
+        </section>
+
+        <section class="featurette row">
+          <div class="col-xs-12 col-sm-7">
+            <h3>TicTacToe</h3>
+            <p><span class="info-label">When:</span> May 2012-June 2012</p>
+            <p><span class="info-label">Contribution:</span> Developer</p>
+            <p><span class="info-label">Technologies:</span> Visual Basic .NET, Windows Presentation Foundation, Microsoft Visual Studio</p>
+            <p><span class="info-label">Description:</span> I built this desktop application for Windows just for fun. The application allows users to play a game of tic-tac-toe against another person or against the computer as either X's or O's.</p>
+            <a class="btn btn-primary" href="">Review my skills and competencies</a>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/tictactoe_screenshot_1.jpg" alt="screenshot of TicTacToe desktop application showing a game of tic-tac-toe in progress">
+            </figure>
+            <figure>
+              <img class="img-thumbnail img-responsive" src="images/tictactoe_screenshot_2.jpg" alt="screenshot of TicTacToe desktop application showing a completed game of tic-tac-toe and a dialog saying 'Player 1 wins!'">
+            </figure>
+          </div>
+        </section>
+
+        <section class="featurette row">
+          <div class="col-xs-12">
+            <h3>Open-Source Contributions</h3>
+            <p>I have made contributions to several open-source software development projects, including the following:</p>
+            <ul>
+              <li><a href="https://github.com/danvk/dygraphs">dygraphs</a></li>
+              <li><a href="https://github.com/jacomyal/sigma.js">sigma.js</a></li>
+              <li><a href="https://www.sublimetext.com/">Sublime Text</a> and <a href="https://packagecontrol.io/">Package Control</a></li>
+            </ul>
+          </div>
+        </section>
 
       </section><!-- /.body -->
 
@@ -120,6 +234,8 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/videojs/dist/video-js/video.js"></script>
+    <script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

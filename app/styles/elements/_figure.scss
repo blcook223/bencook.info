@@ -1,4 +1,16 @@
-.photo-credit {
-  text-align: right;
-  font-size: 10px;
+figure {
+  > img {
+    width: 100%;
+  }
+
+  .photo-credit {
+    text-align: right;
+    font-size: 10px;
+  }
+
+  &.profile-figure {
+    max-width: 158px;
+    float: left;
+    margin: 30px 30px 15px 0;
+  }
 }
