@@ -1,18 +1,44 @@
 // colors
 
-$primary-color: #FFFFFF;
-$secondary-color: #16A085;
-$tertiary-color: #C0392B;
-$highlight-color: #E67E22;
-$complementary-color: #2C3E50;
+$white: white;
+$carrot: #E67E22;
+$pumpkin: #D34500;
+$turquoise: #1ABC9C;
+$green-sea: #16A085;
+$wet-asphalt: #34495E;
+$midnight-blue: #2C3E50;
+$alizarin: #E74C3C;
+$pomegranate: #C0392B;
+$clouds: #ECF0F1;
+$silver: #BDC3C7;
+$concrete: #95A5A6;
+$asbestos: #7F8C8D;
 
-// layout
+// breakpoints
 
-$footer-height: 52px;
-
+$screen-xxs-max: 410px;
 $screen-xs-max: 767px;
 $screen-sm-min: 768px;
 $screen-sm-max: 991px;
 $screen-md-min: 992px;
 $screen-md-max: 1199px;
 $screen-lg-min: 1200px;
+
+// layout
+
+$footer-height: 52px;
+
+// transitions
+
+$default-transition-duration: 0.25s;
+$default-transition: all $default-transition-duration ease 0s;
+
+// borders
+
+$primary-border: 5px solid $silver;
+
+
+
+// TODO: rename colors, font weight and other typography, clean up all (links, etc.), resizing typography and layout for portfolio and about, featurette and timeline < go over
+// TODO: SEO and Google analytics?
+// TODO: more locations, video of surety site

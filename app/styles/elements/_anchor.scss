@@ -1,12 +1,12 @@
 a:not(.btn) {
-  color: $tertiary-color;
+  color: $pomegranate;
 
   &:active, &:hover, &:focus {
-    color: $tertiary-color;
+    color: $pomegranate;
     text-decoration: underline;
   }
 
   &:visited {
-    color: $highlight-color;
+    color: $pumpkin;
   }
 }

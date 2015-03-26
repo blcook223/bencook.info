@@ -1,7 +1,4 @@
 figure {
-  > img {
-    width: 100%;
-  }
 
   .photo-credit {
     text-align: right;
@@ -12,5 +9,10 @@ figure {
     max-width: 158px;
     float: left;
     margin: 30px 30px 15px 0;
+
+    @media (max-width: $screen-xxs-max) {
+      margin: 0 auto;
+      float: none;
+    }
   }
 }

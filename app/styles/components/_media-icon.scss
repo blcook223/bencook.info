@@ -4,10 +4,7 @@
   justify-content: space-around;
   align-items: center;
 
-  .media-icon {
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+  .media-icon:not(:last-child) {
+    margin-right: 10px;
   }
 }

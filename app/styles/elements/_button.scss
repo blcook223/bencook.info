@@ -1,10 +1,19 @@
 .btn-primary {
-  background-color: $secondary-color;
-  color: $primary-color;
-  border-color: $complementary-color;
+  background-color: $turquoise;
+  color: $white;
+  border-color: $midnight-blue;
 
-  &:hover, &:focus, &:active, &.active {
-    color: $primary-color;
-    background-color: darken($secondary-color, 10%);
+  &:hover, &:focus {
+    background-color: $green-sea;
+  }
+}
+
+.btn-secondary {
+  background-color: $pomegranate;
+  color: $white;
+  border-color: $midnight-blue;
+
+  &:hover, &:focus {
+    background-color: $alizarin;
   }
 }

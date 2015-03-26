@@ -1,0 +1,46 @@
+// !important overrides flaTimeline.js programmaticly applied styles
+
+.timeline {
+  margin: 40px 0;
+  border-top: $primary-border !important;
+
+  .date {
+    min-width: 150px;
+  }
+
+  .contentWrapper {
+    border-left: $primary-border !important;
+
+    .circle {
+      border: $primary-border !important;
+    }
+
+    .content {
+      background-color: $turquoise !important;
+      border-color: $green-sea !important;
+      transition: $default-transition;
+      padding: 0 !important;
+
+      .title {
+        padding: 20px !important;
+      }
+
+      .text {
+        cursor: pointer;
+
+        div[class^="col"] {
+          padding: 0 15px 15px 15px;
+        }
+      }
+
+      &:not(.content-open) {
+
+        &:hover {
+          transition: $default-transition;
+          background-color: $green-sea !important;
+          border-color: darken($green-sea, 10%) !important;
+        }
+      }
+    }
+  }
+}

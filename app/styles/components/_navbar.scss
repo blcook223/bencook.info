@@ -1,25 +1,43 @@
 .navbar {
   border: none;
-  background-color: $secondary-color;
+  background-color: $turquoise;
   border-radius: 0;
   margin-bottom: 10px;
 
   .navbar-toggle {
     border: none;
+    border-radius: 0;
+    transition: $default-transition;
 
-    &:hover, &:focus {
-      background-color: transparent;
+    &:before {
+      transition: $default-transition;
+    }
+
+    &:not(.collapsed) {
+      background-color: $wet-asphalt;
+
       &:before {
-        color: lighten($complementary-color, 20%);
-      }
-
-      span[class*="icon"] {
-        background-color: $highlight-color;
+        background-color: $wet-asphalt;
+        color: $white;
       }
     }
 
-    span[class*="icon"] {
-      background-color: $primary-color;
+    &.collapsed {
+      background-color: $turquoise;
+
+      &:before {
+        color: $white;
+        background-color: $turquoise;
+      }
+
+      &:hover, &:focus, &:active {
+        background-color: $green-sea;
+
+        &:before {
+          color: $white;
+          background-color: $green-sea;
+        }
+      }
     }
   }
 
@@ -28,22 +46,21 @@
     > li {
 
       > a {
-        color: $primary-color;
-        font-weight: 600;
+        color: $white;
 
         &:hover, &:focus {
-          background-color: lighten($complementary-color, 10%);
-          color: $highlight-color;
+          color: $white;
+          background-color: $green-sea;
         }
       }
 
       &.active > a {
-        color: white;
-        background-color: $complementary-color;
+        color: $white;
+        background-color: $midnight-blue;
 
         &:hover, &:focus {
-          color: $highlight-color;
-          background-color: $complementary-color;
+          color: $white;
+          background-color: $midnight-blue;
         }
       }
     }

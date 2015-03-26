@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css" />
     <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
     <!-- endbower -->
+    <link type="text/css" rel="stylesheet" href="styles/vendor/flaTimeline.js/jquery.flatimeline.css" />
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -20,7 +21,7 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body>
 
@@ -54,7 +55,159 @@
       </header>
 
       <section class="body">
+        <h2>About Me</h2>
+        <p>Click on items in the timeline below to see more.</p>
 
+        <ul class="flaTimeline timeline">
+          <li class="event" id="birth">
+            <div class="date">October 1985</div>
+            <div class="content">
+              <div class="title">Born in Fort Worth, TX</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>I grew up and attended high school in Fort Worth, TX. Check out a few of my favorite places around town:</p>
+                  <div id="fwMap" class="google-map"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="event" id="greece">
+            <div class="date">2007</div>
+            <div class="content">
+              <div class="title">Studied abroad in Athens, Greece</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>In college, I studied political philosopy and the classics. For one semester, I pursued my interests by studying abroad in Athens, Greece.</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                  <figure>
+                    <img class="img-responsive" src="images/greece_photo_1.jpg" alt="photo of a Greek island village on the edge of a sheer cliff">
+                  </figure>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                  <figure>
+                    <img class="img-responsive" src="images/greece_photo_2.jpg" alt="photo of the Parthenon in Athens, Greece">
+                  </figure>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                  <figure>
+                    <img class="img-responsive" src="images/greece_photo_3.jpg" alt="photo of a monastery perched on a high, rocky cliff in a misty mountain range and a sole hiker walking toward it">
+                  </figure>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                  <figure>
+                    <img class="img-responsive" src="images/greece_photo_4.jpg" alt="view through an archway topped by a cross out over a beach">
+                  </figure>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </li>
+          <li class="event" id="college">
+            <div class="date">May 2008</div>
+            <div class="content">
+              <div class="title">Earned BA in Political Science from Emory University</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>I attended <a href="">Emory University</a> in Atlanta, GA and earned a BA in Political Science with high honors. Here are a few of my college activities and achievements:</p>
+                  <ul>
+                    <li>Language Studies Award in Ancient Greek</li>
+                    <li>Elliott Levitas Award in Political Science</li>
+                    <li><a href="https://www.pbk.org/">Phi Beta Kappa</a></li>
+                    <li>Few Debate Society, President</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </li>
+          <li class="event" id="peaceCorps">
+            <div class="date">2008-2009</div>
+            <div class="content">
+              <div class="title">Served as Peace Corps volunteer in the Pacific</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>I served as an English teacher on a tiny atoll in the Pacific called Pingelap. In addition to teaching English, I lived with an awesome host family and enjoyed the world's freshest tuna sashimi every day.</p>
+                  <div class="col-xs-12">
+                    <figure>
+                      <img class="img-responsive" src="images/peace_corps_photo.jpg" alt="photo of Benjamin Cook with Pingelapese host family">
+                      <figcaption class="photo-credit">Kevin Carley</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </li>
+          <li class="event" id="marriage">
+            <div class="date">December 2012</div>
+            <div class="content">
+              <div class="title">Married Amber Cook in Austin, TX</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>In 2012, I married my amazing wife, Amber. Amber and I had met during our time in the Peace Corps and later reconnected when we both lived in Savannah, GA.</p>
+                  <div class="col-xs-12 col-sm-6">
+                    <figure>
+                      <img class="img-responsive" src="images/engagement_photo.jpg" alt="photo of Benjamin and Amber Cook sitting on a park bench">
+                      <figcaption class="photo-credit">Monica Kim-Smith Guthrie</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <figure>
+                      <img class="img-responsive" src="images/wedding_photo.jpg" alt="wedding photo of Benjamin and Amber Cook outdoords on a swing">
+                      <figcaption class="photo-credit">Spin Rodriguez</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="event" id="gradSchool">
+            <div class="date">May 2013</div>
+            <div class="content">
+              <div class="title">Earned MA in Government from UT Austin</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>I studied political theory and public law in a Ph.D. program at UT Austin. After earning my MA, I decided I needed a change from life in academia, so I began exploring how to turn my passion for programming into a career.</p>
+                  <a class="btn btn-secondary" href="resume.html#education">Learn more about my educational background</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="event" id="training">
+            <div class="date">April 2014</div>
+            <div class="content">
+              <div class="title">Completed UT software development training program</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>In November 2013, I entered an intensive, on-the-job training program in software development at the UT. When I completed the program five months later, I was hired by UT's Office of Accounting as a mainframe and web developer.</p>
+                  <a class="btn btn-secondary" href="portfolio.html#fixedTuitionCalculator">See a sample of my work for the Office of Accounting</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="event" id="son">
+            <div class="date">October 2014</div>
+            <div class="content">
+              <div class="title">My son, Atticus Cook, born in Austin, TX</div>
+              <div class="text row">
+                <div class="col-xs-12">
+                  <p>Amber and I became parents when my son, Atticus, was born in October 2014.</p>
+                  <div class="col-xs-6">
+                    <figure>
+                      <img class="img-responsive" src="images/son_photo_1.jpg" alt="close-up photo of a baby boy laying on his stomach">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6">
+                    <figure>
+                      <img class="img-responsive" src="images/son_photo_2.jpg" alt="photo of a baby boy with a bib on eating a spoonful of baby food">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </section><!-- /.body -->
 
       <footer class="footer">
@@ -89,16 +242,17 @@
     <script src="bower_components/videojs/dist/video-js/video.js"></script>
     <script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
     <!-- endbower -->
+    <script type="text/javascript" src="scripts/vendor/flaTimeline.js/jquery.flatimeline.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      // e.src='//www.google-analytics.com/analytics.js';
+      // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      // ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
