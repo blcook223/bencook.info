@@ -1,0 +1,17 @@
+.content-section {
+  padding: 0 30px 30px 30px;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &:nth-child(2) {
+    background-color: $inverse-bg-color;
+    color: $inverse-fg-color;
+  }
+  &:nth-child(3) {
+    background-color: $primary-bg-color;
+    color: $inverse-fg-color;
+  }
+}

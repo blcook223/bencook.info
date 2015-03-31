@@ -5,7 +5,7 @@
   border-top: $primary-border !important;
 
   .date {
-    min-width: 150px;
+    min-width: 200px;
   }
 
   .contentWrapper {
@@ -16,8 +16,8 @@
     }
 
     .content {
-      background-color: $turquoise !important;
-      border-color: $green-sea !important;
+      background-color: $inverse-bg-color !important;
+      border-color: $inverse-bg-variant-color !important;
       transition: $default-transition;
       padding: 0 !important;
 
@@ -33,12 +33,12 @@
         }
       }
 
-      &:not(.content-open) {
+      &:not(.opened) {
 
         &:hover {
           transition: $default-transition;
-          background-color: $green-sea !important;
-          border-color: darken($green-sea, 10%) !important;
+          background-color: $inverse-bg-variant-color !important;
+          border-color: darken($inverse-bg-variant-color, 10%) !important;
         }
       }
     }

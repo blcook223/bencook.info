@@ -108,7 +108,7 @@
             <p><span class="info-label">Contribution:</span> Front-end developer</p>
             <p><span class="info-label">Technologies:</span> HTML5, CSS3, Bootstrap, Sass, JavaScript, jQuery, Grunt, Git</p>
             <p><span class="info-label">Description:</span> The Surety BioEvent App allows public health analysts to monitor infectious disease outbreaks. The Python back-end scrapes social media outlets for posts related to ongoing outbreaks. The front-end allows analysts to explore raw data as well as to visualize the application of various filters to the data.</p>
-            <button class="btn btn-primary">See the website in action</button>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#suretyModal">See the website in action</button>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-5">
             <figure>
@@ -171,7 +171,6 @@
             <p><span class="info-label">Contribution:</span> Copy writer and editor</p>
             <p><span class="info-label">Technologies:</span> Atlassian Confluence, Microsoft Office</p>
             <p><span class="info-label">Description:</span> Giving Voice to Values is a multi-media website offering a variety of teaching resources based on the approach to behavioral ethics developed by Mary Gentile. While not a software development project, my work on the Giving Voice to Values website showcases my web writing and editing skills. Prior to entering the IT field, I pursued a career in professional writing and editing.</p>
-            <a class="btn btn-primary" href="resume.html#publications">See my publications</a>
             <a class="btn btn-primary" href="http://ethicsunwrapped.utexas.edu/series/giving-voice-to-values">Visit the website</a>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-pull-7 col-md-5">
@@ -226,10 +225,10 @@
           <div class="col-sm-push-8 col-sm-4">
             <div class="footer-sidebar">
               <div class="media-icon-group">
-                <a class="media-icon" href="https://github.com/blcook223"><img title="GitHub" src="images/github-32.png" alt="GitHub icon"></a>
-                <a class="media-icon" href="http://stackoverflow.com/users/4513644/blcook223"><img title="Stack Overflow" src="images/stackoverflow-32.png" alt="Stack Overflow icon"></a>
-                <a class="media-icon" href="http://www.linkedin.com/in/benjaminleecook/"><img title="Linkedin" src="images/linkedin-32.png" alt="Linkedin icon"></a>
-                <a class="media-icon" href="mailto:benjamin.l.cook@gmail.com" alt="email icon"><img title="Email" src="images/email-32.png"></a>
+                <a class="media-icon" href="https://github.com/blcook223"><img title="GitHub" src="images/icons/github-32.png" alt="GitHub icon"></a>
+                <a class="media-icon" href="http://stackoverflow.com/users/4513644/blcook223"><img title="Stack Overflow" src="images/icons/stackoverflow-32.png" alt="Stack Overflow icon"></a>
+                <a class="media-icon" href="http://www.linkedin.com/in/benjaminleecook/"><img title="Linkedin" src="images/icons/linkedin-32.png" alt="Linkedin icon"></a>
+                <a class="media-icon" href="mailto:benjamin.l.cook@gmail.com" alt="email icon"><img title="Email" src="images/icons/email-32.png"></a>
               </div>
             </div>
           </div>
@@ -246,10 +245,32 @@
 
     </div><!-- /.container -->
 
+    <div class="modal fade" id="suretyModal" tabindex="-1" role="dialog" aria-labelledby="suretyModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="suretyModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body"> <!-- TODO: fix this up -->
+            <video id="suretyVideo" class="video-js vjs-default-skin"
+              controls preload="auto" width="640" height="264"
+              poster="http://video-js.zencoder.com/oceans-clip.png"
+              data-setup='{"example_option":true}'>
+             <source src="videos/surety_video.mp4" type="video/mp4" />
+             <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>.</p>
+            </video>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/videojs/dist/video-js/video.js"></script>
     <script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
     <!-- endbower -->
@@ -258,12 +279,7 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      // e.src='//www.google-analytics.com/analytics.js';
-      // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      // ga('create','UA-XXXXX-X');ga('send','pageview');
+      // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->

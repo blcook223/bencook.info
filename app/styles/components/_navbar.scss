@@ -1,6 +1,6 @@
 .navbar {
   border: none;
-  background-color: $turquoise;
+  background-color: $inverse-bg-color;
   border-radius: 0;
   margin-bottom: 10px;
 
@@ -14,28 +14,28 @@
     }
 
     &:not(.collapsed) {
-      background-color: $wet-asphalt;
+      background-color: $inverse-bg-selection-color;
 
       &:before {
-        background-color: $wet-asphalt;
-        color: $white;
+        background-color: $inverse-bg-selection-color;
+        color: $inverse-fg-color;
       }
     }
 
     &.collapsed {
-      background-color: $turquoise;
+      background-color: $inverse-bg-color;
 
       &:before {
-        color: $white;
-        background-color: $turquoise;
+        color: $inverse-fg-color;
+        background-color: $inverse-bg-color;
       }
 
       &:hover, &:focus, &:active {
-        background-color: $green-sea;
+        background-color: $inverse-bg-variant-color;
 
         &:before {
-          color: $white;
-          background-color: $green-sea;
+          color: $inverse-fg-color;
+          background-color: $inverse-bg-variant-color;
         }
       }
     }
@@ -46,21 +46,21 @@
     > li {
 
       > a {
-        color: $white;
+        color: $inverse-fg-color;
 
         &:hover, &:focus {
-          color: $white;
-          background-color: $green-sea;
+          color: $inverse-fg-color;
+          background-color: $inverse-bg-variant-color;
         }
       }
 
       &.active > a {
-        color: $white;
-        background-color: $midnight-blue;
+        color: $inverse-fg-color;
+        background-color: $primary-bg-color;
 
         &:hover, &:focus {
-          color: $white;
-          background-color: $midnight-blue;
+          color: $inverse-fg-color;
+          background-color: $primary-bg-color;
         }
       }
     }

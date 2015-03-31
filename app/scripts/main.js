@@ -14,8 +14,8 @@
 
   if (timelines.length) {
     $('ul.flaTimeline').flaTimeline({
-      onStart: function() {
-        $(this).parent('.content').toggleClass('content-open');
+      onComplete: function() {
+        $(this).parent('.content').toggleClass('opened');
       },
       onOpeningComplete: function() {
         google.maps.event.trigger(map, 'resize');

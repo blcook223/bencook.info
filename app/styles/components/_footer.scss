@@ -1,6 +1,6 @@
 .footer {
   height: $footer-height;
-  color: $white;
+  color: $inverse-fg-color;
   position: relative;
 }
 
@@ -9,7 +9,7 @@ footer {
   .footer-main {
     @extend .footer;
 
-    background-color: $turquoise;
+    background-color: $inverse-bg-color;
     @media (min-width: $screen-sm-min) {
       margin-right: -15px;
     }
@@ -18,7 +18,7 @@ footer {
   .footer-sidebar {
     @extend .footer;
 
-    background-color: $midnight-blue;
+    background-color: $primary-bg-color;
 
     @media (min-width: $screen-sm-min) {
       margin-left: -15px;

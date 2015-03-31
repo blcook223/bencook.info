@@ -1,19 +1,19 @@
 .btn-primary {
-  background-color: $turquoise;
-  color: $white;
-  border-color: $midnight-blue;
+  background-color: $inverse-bg-color;
+  color: $inverse-fg-color;
+  border-color: $primary-bg-color;
 
   &:hover, &:focus {
-    background-color: $green-sea;
+    background-color: $inverse-bg-variant-color;
   }
 }
 
 .btn-secondary {
-  background-color: $pomegranate;
-  color: $white;
-  border-color: $midnight-blue;
+  background-color: $secondary-bg-color;
+  color: $inverse-fg-color;
+  border-color: $primary-bg-color;
 
   &:hover, &:focus {
-    background-color: $alizarin;
+    background-color: $secondary-bg-variant-color;
   }
 }

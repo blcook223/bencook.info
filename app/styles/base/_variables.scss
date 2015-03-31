@@ -1,18 +1,14 @@
 // colors
 
-$white: white;
-$carrot: #E67E22;
-$pumpkin: #D34500;
-$turquoise: #1ABC9C;
-$green-sea: #16A085;
-$wet-asphalt: #34495E;
-$midnight-blue: #2C3E50;
-$alizarin: #E74C3C;
-$pomegranate: #C0392B;
-$clouds: #ECF0F1;
-$silver: #BDC3C7;
-$concrete: #95A5A6;
-$asbestos: #7F8C8D;
+$inverse-fg-color: #FFFFFF;
+$highlight-color: #E67E22;
+$highlight-variant-color: #D34500;
+$inverse-bg-color: #1ABC9C;
+$inverse-bg-variant-color: #16A085;
+$inverse-bg-selection-color: #34495E;
+$primary-bg-color: #2C3E50;
+$secondary-bg-variant-color: #E74C3C;
+$secondary-bg-color: #C0392B;
 
 // breakpoints
 
@@ -35,10 +31,12 @@ $default-transition: all $default-transition-duration ease 0s;
 
 // borders
 
-$primary-border: 5px solid $silver;
+$primary-border-color: #BDC3C7;
+$primary-border: 5px solid $primary-border-color;
 
 
-
-// TODO: rename colors, font weight and other typography, clean up all (links, etc.), resizing typography and layout for portfolio and about, featurette and timeline < go over
 // TODO: SEO and Google analytics?
-// TODO: more locations, video of surety site
+// TODO: more locations, video of surety site, make map prettier
+// TODO: when this site is launched, take down google site and redirect, publicize stuff
+// TODO: gruntfile fix with index.html and consider tailoring stuff to pages (but caching issues)
+// TODO: better Atticus picture
