@@ -7,12 +7,12 @@
   }
 
   .title {
-    color: $inverse-fg-color;
+    color: $white;
     font-size: 20px;
     margin: 0 5px;
 
     &:before, &:after {
-      color: $highlight-color;
+      color: $carrot;
       margin: 0 5px;
     }
     &:before {

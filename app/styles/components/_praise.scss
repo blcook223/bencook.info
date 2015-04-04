@@ -1,3 +1,14 @@
+%blockquote-bookend {
+  position: absolute;
+  top: -35px;
+  font-size: 132px;
+  color: $carrot;
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 96px;
+  }
+}
+
 .praise {
   padding: 40px 120px;
 
@@ -23,22 +34,13 @@
       padding: 0 35px;
     }
 
-    &:before, &:after {
-      position: absolute;
-      top: -35px;
-      font-size: 132px;
-      color: $highlight-color;
-
-      @media (max-width: $screen-xs-max) {
-        font-size: 96px;
-      }
-    }
-
     &:before {
+      @extend %blockquote-bookend;
       left: 0;
       content: "\201C";
     }
     &:after {
+      @extend %blockquote-bookend;
       right: 0;
       content: "\201D";
     }

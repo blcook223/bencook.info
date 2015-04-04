@@ -16,13 +16,25 @@
     }
 
     .content {
-      background-color: $inverse-bg-color !important;
-      border-color: $inverse-bg-variant-color !important;
+      background-color: $turquoise !important;
+      border-color: $green-sea !important;
       transition: $default-transition;
       padding: 0 !important;
 
       .title {
         padding: 20px !important;
+
+        .name {
+          font-size: 20px;
+          margin-left: 30px;
+
+        }
+        .institution {
+          display: block;
+          text-transform: uppercase;
+          font-size: 14px;
+          margin-left: 30px;
+        }
       }
 
       .text {
@@ -37,9 +49,30 @@
 
         &:hover {
           transition: $default-transition;
-          background-color: $inverse-bg-variant-color !important;
-          border-color: darken($inverse-bg-variant-color, 10%) !important;
+          background-color: $green-sea !important;
+          border-color: darken($green-sea, 10%) !important;
         }
+      }
+    }
+  }
+
+  &.minimal {
+    .date, .circle {
+      cursor: default !important;
+    }
+
+    .content {
+      background-color: transparent !important;
+      border-color: transparent !important;
+
+      &:not(.opened):hover {
+        background-color: transparent !important;
+        border-color: transparent !important;
+      }
+
+      .title {
+        color: $midnight-blue;
+        cursor: default !important;
       }
     }
   }

@@ -1,8 +1,8 @@
 .navbar {
   border: none;
-  background-color: $inverse-bg-color;
+  background-color: $turquoise;
   border-radius: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 
   .navbar-toggle {
     border: none;
@@ -12,30 +12,28 @@
     &:before {
       transition: $default-transition;
     }
-
     &:not(.collapsed) {
-      background-color: $inverse-bg-selection-color;
+      background-color: $light-turquoise;
 
       &:before {
-        background-color: $inverse-bg-selection-color;
-        color: $inverse-fg-color;
+        background-color: $light-turquoise;
+        color: $white;
       }
     }
 
     &.collapsed {
-      background-color: $inverse-bg-color;
+      background-color: $turquoise;
 
       &:before {
-        color: $inverse-fg-color;
-        background-color: $inverse-bg-color;
+        color: $white;
+        background-color: $turquoise;
       }
-
       &:hover, &:focus, &:active {
-        background-color: $inverse-bg-variant-color;
+        background-color: $green-sea;
 
         &:before {
-          color: $inverse-fg-color;
-          background-color: $inverse-bg-variant-color;
+          color: $white;
+          background-color: $green-sea;
         }
       }
     }
@@ -46,21 +44,21 @@
     > li {
 
       > a {
-        color: $inverse-fg-color;
+        color: $white;
 
         &:hover, &:focus {
-          color: $inverse-fg-color;
-          background-color: $inverse-bg-variant-color;
+          color: $white;
+          background-color: $green-sea;
         }
       }
 
       &.active > a {
-        color: $inverse-fg-color;
-        background-color: $primary-bg-color;
+        color: $white;
+        background-color: $midnight-blue;
 
         &:hover, &:focus {
-          color: $inverse-fg-color;
-          background-color: $primary-bg-color;
+          color: $white;
+          background-color: $midnight-blue;
         }
       }
     }

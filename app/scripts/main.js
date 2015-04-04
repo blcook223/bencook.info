@@ -4,7 +4,8 @@
   var CUSTOM_MAPTYPE_ID = 'custom_map',
       MAP_HUE = '#C0392B',
       mapCanvas = document.getElementById('fwMap'),
-      timelines = $('ul.flaTimeline'),
+      timelines = $('ul.flaTimeline').not('.minimal'),
+      minimalTimelines = $('ul.flaTimeline').filter('.minimal'),
       linkedEvent,
       locations,
       labels,
@@ -12,8 +13,14 @@
       featureOptions,
       map;
 
+  if (minimalTimelines.length) {
+    minimalTimelines.flaTimeline({
+      toggle: false
+    });
+  }
+
   if (timelines.length) {
-    $('ul.flaTimeline').flaTimeline({
+    timelines.flaTimeline({
       onComplete: function() {
         $(this).parent('.content').toggleClass('opened');
       },
