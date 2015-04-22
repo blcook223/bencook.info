@@ -48,15 +48,19 @@
     locations = [
       {
         position: new google.maps.LatLng(32.75492, -97.33070),
-        content: '<a href="">Flying Saucer</a>'
+        content: '<a href="http://www.beerknurd.com/stores/fortworth/">Flying Saucer</a>'
       },
       {
         position: new google.maps.LatLng(32.67513, -97.41086),
-        content: '<a href="">Rosa\'s Cafe</a>'
+        content: '<a href="http://www.rosascafe.com/home">Rosa\'s Cafe</a>'
       },
       {
         position: new google.maps.LatLng(32.60990, -97.39548),
         content: 'My High School'
+      },
+      {
+        position: new google.maps.LatLng(32.751587, -97.082996),
+        content: '<a href="http://texas.rangers.mlb.com/tex/ballpark/">Ballpark in Arlington</a>'
       }
     ];
 
@@ -85,6 +89,11 @@
 
     map = new google.maps.Map(mapCanvas, {
       zoom: 11,
+      panControl: false,
+      streetViewControl: false,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.SMALL
+      },
       mapTypeControlOptions: {
         mapTypeIds: []
       },
@@ -93,7 +102,7 @@
     customMapType = new google.maps.StyledMapType(featureOptions);
     map.mapTypes.set(CUSTOM_MAPTYPE_ID, customMapType);
     labels = [];
-    for (var i = 0; i < locations.length; ++i) {
+    for (var i = 0, len = locations.length; i < len; ++i) {
       labels.push(new google.maps.InfoWindow({
         content: locations[i].content,
         position: locations[i].position

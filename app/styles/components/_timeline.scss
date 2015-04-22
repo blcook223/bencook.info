@@ -21,6 +21,10 @@
       transition: $default-transition;
       padding: 0 !important;
 
+      ul {
+        list-style-type: disc;
+      }
+
       .title {
         padding: 20px !important;
 
