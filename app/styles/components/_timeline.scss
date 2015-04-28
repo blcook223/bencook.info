@@ -16,8 +16,9 @@
     }
 
     .content {
-      background-color: $turquoise !important;
-      border-color: $green-sea !important;
+
+      background-color: $primary-theme-color !important;
+      border-color: $dark-primary-theme-color !important;
       transition: $default-transition;
       padding: 0 !important;
 
@@ -27,6 +28,10 @@
 
       .title {
         padding: 20px !important;
+
+        a {
+          color: white;
+        }
 
         .name {
           font-size: 20px;
@@ -53,8 +58,8 @@
 
         &:hover {
           transition: $default-transition;
-          background-color: $green-sea !important;
-          border-color: darken($green-sea, 10%) !important;
+          background-color: $dark-primary-theme-color !important;
+          border-color: darken($dark-primary-theme-color, 10%) !important;
         }
       }
     }
@@ -75,7 +80,7 @@
       }
 
       .title {
-        color: $midnight-blue;
+        color: $dark-contrast-color;
         cursor: default !important;
       }
     }

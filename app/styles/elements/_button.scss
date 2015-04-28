@@ -1,19 +1,19 @@
 .btn-primary {
-  background-color: $turquoise;
-  color: $white;
-  border-color: $midnight-blue;
+  background-color: $primary-theme-color;
+  color: $light-contrast-color;
+  border-color: $dark-contrast-color;
 
   &:hover, &:focus {
-    background-color: $green-sea;
+    background-color: $dark-primary-theme-color;
   }
 }
 
 .btn-secondary {
-  background-color: $pomegranate;
-  color: $white;
-  border-color: $midnight-blue;
+  background-color: $dark-secondary-theme-color;
+  color: $light-contrast-color;
+  border-color: $dark-contrast-color;
 
   &:hover, &:focus {
-    background-color: $alizarin;
+    background-color: $secondary-theme-color;
   }
 }

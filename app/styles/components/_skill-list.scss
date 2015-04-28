@@ -31,7 +31,7 @@
     }
   }
   .progress {
-    background-color: $silver;
+    background-color: $border-color;
     width: calc(55% - 5px);
     float: right;
     margin: 5px 0;
@@ -47,7 +47,7 @@
     }
 
     .progress-bar {
-      background-color: $green-sea;
+      background-color: $dark-primary-theme-color;
       &.skill-progress-expert { width: 100%; }
       &.skill-progress-proficient { width: 80%; }
       &.skill-progress-competent { width: 60%; }
