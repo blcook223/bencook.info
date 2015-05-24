@@ -72,7 +72,7 @@ module.exports = function (grunt) {
     connect: {
       options: {
         port: 9000,
-        open: 'http://localhost:9000/home.html',
+        open: 'http://localhost:9000/index.html',
         livereload: 35729,
         // Change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost'
@@ -144,7 +144,7 @@ module.exports = function (grunt) {
       all: {
         options: {
           run: true,
-          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/home.html']
+          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
         }
       }
     },
@@ -225,7 +225,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/home.html'
+      html: '<%= config.app %>/index.html'
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
@@ -286,7 +286,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // By default, your `home.html`'s <!-- Usemin block --> will take care
+    // By default, your `index.html`'s <!-- Usemin block --> will take care
     // of minification. These next options are pre-configured if you do not
     // wish to use the Usemin blocks.
     // cssmin: {
