@@ -31,18 +31,23 @@
 
         a {
           color: white;
+
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+          }
+        }
+
+        p {
+          margin-bottom: 0;
         }
 
         .name {
           font-size: 20px;
-          margin-left: 30px;
-
+          font-style: italic;
         }
         .institution {
-          display: block;
           text-transform: uppercase;
           font-size: 14px;
-          margin-left: 30px;
         }
       }
 
@@ -54,25 +59,31 @@
         }
       }
 
-      &:not(.opened) {
-
-        &:hover {
-          transition: $default-transition;
-          background-color: $dark-primary-theme-color !important;
-          border-color: darken($dark-primary-theme-color, 10%) !important;
-        }
+      &:hover {
+        transition: $default-transition;
+        background-color: $dark-primary-theme-color !important;
+        border-color: darken($dark-primary-theme-color, 10%) !important;
       }
     }
   }
 
-  &.minimal {
+  &.no-toggle {
     .date, .circle {
       cursor: default !important;
     }
 
     .content {
+      .title {
+        cursor: default !important;
+      }
+    }
+  }
+
+  &.minimal {
+    .content {
       background-color: transparent !important;
       border-color: transparent !important;
+      color: $dark-contrast-color !important;
 
       &:not(.opened):hover {
         background-color: transparent !important;
@@ -81,7 +92,7 @@
 
       .title {
         color: $dark-contrast-color;
-        cursor: default !important;
+        margin-left: 30px;
       }
     }
   }

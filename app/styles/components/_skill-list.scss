@@ -47,7 +47,7 @@
     }
 
     .progress-bar {
-      background-color: $dark-primary-theme-color;
+      background-color: $primary-theme-color;
       &.skill-progress-expert { width: 100%; }
       &.skill-progress-proficient { width: 80%; }
       &.skill-progress-competent { width: 60%; }

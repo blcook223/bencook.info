@@ -324,12 +324,9 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            '{,*/}*.php',
+            '.htaccess',
             'styles/fonts/{,*/}*.*'
           ]
-        }, {
-          src: 'node_modules/apache-server-configs/dist/.htaccess',
-          dest: '<%= config.dist %>/.htaccess'
         }, {
           expand: true,
           dot: true,

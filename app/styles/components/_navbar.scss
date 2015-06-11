@@ -8,6 +8,7 @@
     border: none;
     border-radius: 0;
     transition: $default-transition;
+    margin-left: 0;
 
     &:before {
       transition: $default-transition;
