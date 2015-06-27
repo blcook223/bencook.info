@@ -1,12 +1,12 @@
 from django.db import models
 
 
-class Event(models.Model):
-    pass
+# class Event(models.Model):
+#     pass
 
 
-class Project(models.Model):
-    pass
+# class Project(models.Model):
+#     pass
 
 
 class Skill(models.Model):
@@ -40,9 +40,12 @@ class Skill(models.Model):
     name = models.CharField(max_length=200)
 
 
-class Testimonial(models.Model):
-    pass
+# class Testimonial(models.Model):
+#     """
+#     Testimony from a customer or coworker
+#     """
+#     pass
 
 
-class Job(models.Model):
-    pass
+# class Job(models.Model):
+#     pass
