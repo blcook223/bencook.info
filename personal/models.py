@@ -38,7 +38,7 @@ class Image(models.Model):
     title = models.CharField(max_length=200,
                              null=True,
                              blank=True)
-    image_file = models.ImageField()
+    image_file = models.ImageField(upload_to='uploaded/personal')
     alt = models.CharField('alt text',
                            max_length=500)
     link = models.ForeignKey(Link,
@@ -128,7 +128,14 @@ class Project(models.Model):
     contribution = models.CharField(max_length=200)
     technologies = models.ManyToManyField(Technology)
     description = models.TextField()
-    links = models.ManyToManyField(Link)
+    links = models.ManyToManyField(Link,
+                                   blank=True)
+    first_image = models.ForeignKey(Image,
+                                    related_name='first_project_image',
+                                    null=True)
+    second_image = models.ForeignKey(Image,
+                                     related_name='second_project_image',
+                                     null=True)
 
     def __str__(self):
         return self.name
