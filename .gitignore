@@ -4,6 +4,8 @@ settings.py
 local_settings.py
 *.sqlite3
 
+media/uploaded
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
