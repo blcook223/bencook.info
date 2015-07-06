@@ -1,0 +1,15 @@
+{
+  "name": "bencook.info",
+  "version": "0.0.0",
+  "description": "personal website for Benjamin Cook",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blcook223/bencook.info"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
