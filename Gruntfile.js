@@ -20,6 +20,19 @@ module.exports = function (grunt) {
     // Project settings
     config: config,
 
+    version: {
+      app: {
+        files: [{
+          expand: true,
+          cwd: '.',
+          src: [
+            'package.json',
+            'bower.json'
+          ]
+        }]
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
