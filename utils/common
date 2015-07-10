@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pre() {
+  BUILD_ROOT=$SCRIPT_PATH/..
+  PRE_BUILD_PATH=$PATH
+  export PATH=$BUILD_ROOT/node_modules/.bin:$PATH
+}
+
+fail() {
+  echo "$1 task failed, exiting..."
+  exit 1
+}
