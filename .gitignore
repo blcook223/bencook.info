@@ -7,6 +7,8 @@ local_settings.py
 media/uploaded
 node_modules
 bower_components
+vendor
+.bundle
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

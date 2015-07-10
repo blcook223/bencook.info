@@ -1,13 +1,15 @@
 #!/bin/bash
 
-lint () {
-  jshint $BUILD_ROOT
+fail() {
+  echo "$1 task failed, exiting..."
+  exit 1
 }
 
 pushd `dirname $0` > /dev/null
 SCRIPT_PATH=`pwd`
+BUILD_ROOT=$SCRIPT_PATH/..
 popd > /dev/null
 
 source $SCRIPT_PATH/common
 pre
-lint || fail 'lint'
+$BUILD_ROOT/node_modules/.bin/jshint $BUILD_ROOT || fail 'JSHint'

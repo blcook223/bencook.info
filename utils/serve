@@ -1,9 +1,0 @@
-#!/bin/bash
-
-pushd `dirname $0` > /dev/null
-SCRIPT_PATH=`pwd`
-popd > /dev/null
-
-source $SCRIPT_PATH/common
-pre
-$BUILD_ROOT/manage.py runserver
