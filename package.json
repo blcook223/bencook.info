@@ -1,21 +1,16 @@
 {
-  "name": "bencook.info",
-  "version": "0.0.0",
-  "description": "personal website for Benjamin Cook",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/blcook223/bencook.info"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-version": "^1.0.0",
-    "jshint-stylish": "^2.0.1",
-    "load-grunt-tasks": "^3.2.0",
-    "time-grunt": "^1.2.1"
-  }
+    "name": "bencook.info",
+    "version": "0.0.0",
+    "description": "personal website for Benjamin Cook",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/blcook223/bencook.info"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "devDependencies": {
+    },
+    "scripts": {
+    }
 }
