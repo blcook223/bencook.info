@@ -1,0 +1,19 @@
+#!/bin/bash
+
+pre() {
+  BUILD_ROOT=`pwd`/../
+  PRE_BUILD_PATH=$PATH
+  export PATH=./node_modules/.bin:$PATH
+}
+
+post() {
+  export PATH=$PRE_BUILD_PATH
+}
+
+lint () {
+  jshint $BUILD_ROOT
+}
+
+pre
+lint
+post
