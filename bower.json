@@ -1,8 +1,23 @@
 {
-  "name": "bencook.info",
-  "version": "0.0.0",
-  "description": "personal website for Benjamin Cook",
-  "moduleType": [
-    "globals"
-  ]
+    "name": "bencook.info",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "~3.3.2",
+        "flat-ui": "~2.2.2"
+    },
+    "overrides": {
+        "flat-ui": {
+        "dependencies": {}
+    },
+    "bootstrap": {
+        "main": [
+            "less/bootstrap.less",
+            "dist/css/bootstrap.css",
+            "dist/fonts/glyphicons-halflings-regular.eot",
+            "dist/fonts/glyphicons-halflings-regular.svg",
+            "dist/fonts/glyphicons-halflings-regular.ttf",
+            "dist/fonts/glyphicons-halflings-regular.woff"
+        ]
+    }
 }
