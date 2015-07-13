@@ -7,7 +7,7 @@ def index(request):
     """
     Homepage of personal app and website
     """
-    return render(request, 'personal/home.html')
+    return render(request, 'personal/index.html')
 
 
 def portfolio(request):

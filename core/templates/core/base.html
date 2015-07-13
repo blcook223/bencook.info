@@ -1,3 +1,5 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -6,35 +8,37 @@
   <meta name="description" content="Versatile software development professional with experience using a range of tools and languages">
   <meta name="author" content="Benjamin Cook">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- TODO: change favicon, stylesheet, and script links -->
+  <link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}">
 
-  <!-- build:css({.,app}) styles/vendor.css -->
-  <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
-  <!-- endbower -->
-  <link type="text/css" rel="stylesheet" href="styles/vendor/flaTimeline.js/jquery.flatimeline.css" />
-  <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
-  <!-- build:js scripts/vendor/modernizr.js -->
-  <script src="bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
+{% block vendor_styles %}
+  <link rel="stylesheet" href="{% static 'core/styles/vendor/bootstrap.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/styles/vendor/flat-ui.min.css' %}" />
+{% endblock %}
+{% block app_styles %}
+  <link rel="stylesheet" href="{% static 'core/styles/main.css' %}" />
+{% endblock %}
 </head>
 
 <body>
   <div class="container">
-{% include 'header.html' %}
+{% include 'core/header.html' %}
 
     <div class="body">
 {% block body %}
 {% endblock %}
     </div>
 
-{% include 'footer.html' %}
+{% include 'core/footer.html' %}
   </div>
-}
+
+{% block vendor_scripts %}
+  <script type="text/javascript" src="{% static 'core/scripts/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'core/scripts/flat-ui.min.js' %}"></script>
+{% endblock %}
+{% block app_scripts %}
+{% endblock %}
+
 </body>
 </html>
+
+  <!-- TODO: keyword meta tag, revise viewport tag -->
