@@ -1,38 +1,51 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
-
+from .models import Project, OpenSourceContribution
 
 def index(request):
     """
     Homepage of personal app and website
     """
-    return render(request, 'personal/index.html')
+    return render(
+        request,
+        'personal/index.html',
+        {
+            'current_view': 'index'
+        }
+    )
 
 
 def portfolio(request):
     """
     Selected software development projects and contributions
     """
-    return HttpResponse('portfolio')
+    return render(
+        request,
+        'personal/portfolio.html',
+        {
+            'current_view': 'portfolio',
+            'projects': Project.objects.order_by('-start_date'),
+            'open_source_contribs': OpenSourceContribution.objects.all(),
+        }
+    )
 
 
 def about(request):
     """
     Biographical information
     """
-    return HttpResponse('about')
+    pass
 
 
 def contact(request):
     """
     A contact form
     """
-    return HttpResponse('contact')
+    pass
 
 
 def resume(request):
     """
     Professional experience, education, and skills
     """
-    return HttpResponse('resume')
+    pass

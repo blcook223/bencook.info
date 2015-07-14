@@ -1,0 +1,64 @@
+{% extends "core/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'core/styles/main.css' %}" />
+<link rel="stylesheet" href="{% static 'personal/styles/main.css' %}" />
+{% endblock %}
+
+{% block body %}
+<h2>Selected Projects</h2>
+
+  {% for project in projects %}
+<section class="featurette clearfix">
+  <div class="col-xs-12 {% cycle 'col-md-push-5' '' %} col-md-7">
+    <h3>{{ project.name }}</h3>
+    <p><span class="info-label">When:</span> {{ project.start_date|date:"F Y" }}-{% if project.end_date %}{{ project.end_date|date:"F Y" }}{% else %}Present{% endif %}</p>
+    <p><span class="info-label">Contribution:</span> {{ project.contribution }}</p>
+    <p><span class="info-label">Technologies:</span> {% for tech in project.technologies.all %}{% if not forloop.first %}, {% endif %}{{ tech.name }}{% endfor %}</p>
+    <p><span class="info-label">Description:</span> {{ project.description|safe }}</p>
+    {% for link in project.links.all %}
+    <a class="btn btn-primary" href="{{ link.href }}" {% if link.target %}target="_blank"{% endif %} {% if link.title %} title="{{ link.title }}"{% endif %}>{{ link.text }}</a>
+    {% endfor %}
+  </div>
+  <div class="col-xs-12 col-sm-6 {% cycle 'col-md-pull-7' '' as pull_col %} col-md-5">
+    <figure>
+    {% if project.first_image.link %}
+      <a href="{{ MEDIA_URL }}{{ project.first_image.link.href }}" {% if project.first_image.link.title %}title="{{ project.first_image.link.title }}"{% endif %} {% if project.first_image.link.target %}target="_blank"{% endif %}>
+    {% endif %}
+        <img class="img-thumbnail img-responsive" src="{{ project.first_image.image_file.url }}" alt="{{ project.first_image.alt }}" {% if project.first_image.title %}title="{{ project.first_image.title }}"{% endif %}>
+    {% if project.first_image.link %}
+      </a>
+    {% endif %}
+    </figure>
+  </div>
+  <div class="col-xs-12 col-sm-6 {{ pull_col }} col-md-5">
+    <figure>
+    {% if project.second_image.link %}
+      <a href="{{ project.second_image.link.href }}" {% if project.second_image.link.title %}title="{{ project.second_image.link.title }}"{% endif %} {% if project.second_image.link.target %}target="_blank"{% endif %}>
+    {% endif %}
+        <img class="img-thumbnail img-responsive" src="{{ project.second_image.image_file.url }}" alt="{{ project.second_image.alt }}" {% if project.second_image.title %}title="{{ project.second_image.title }}"{% endif %}>
+    {% if project.second_image.link %}
+      </a>
+    {% endif %}
+    </figure>
+  </div>
+</section>
+{% endfor %}
+
+<section class="featurette clearfix">
+  <div class="col-xs-12">
+    <h3>Open-Source Contributions</h3>
+    <p>I have made contributions to several open-source software development projects, including the following:</p>
+    <ul>
+{% for contrib in open_source_contribs %}
+      <li><a href="{{ contrib.link.href }}" {% if contrib.link.target %}target="_blank"{% endif %} {% if contrib.link.title %}title="{{ contrib.link.title }}"{% endif %}>{{ contrib.name }}</a></li>
+{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% endblock %}
