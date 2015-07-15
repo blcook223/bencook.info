@@ -47,16 +47,16 @@
     </figure>
   </div>
 </section>
-{% endfor %}
+  {% endfor %}
 
 <section class="featurette clearfix">
   <div class="col-xs-12">
     <h3>Open-Source Contributions</h3>
     <p>I have made contributions to several open-source software development projects, including the following:</p>
     <ul>
-{% for contrib in open_source_contribs %}
+  {% for contrib in open_source_contribs %}
       <li><a href="{{ contrib.link.href }}" {% if contrib.link.target %}target="_blank"{% endif %} {% if contrib.link.title %}title="{{ contrib.link.title }}"{% endif %}>{{ contrib.name }}</a></li>
-{% endfor %}
+  {% endfor %}
     </ul>
   </div>
 </section>

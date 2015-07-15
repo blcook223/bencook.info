@@ -1,6 +1,13 @@
 from django.shortcuts import render
 
-from .models import Project, OpenSourceContribution
+from .models import (
+    Project,
+    OpenSourceContribution,
+    Job,
+    Skill,
+    Testimonial,
+)
+
 
 def index(request):
     """
@@ -48,4 +55,18 @@ def resume(request):
     """
     Professional experience, education, and skills
     """
-    pass
+    return render(
+        request,
+        'personal/resume.html',
+        {
+            'current_view': 'resume',
+            'jobs': Job.objects.order_by('-start_date'),
+            'languages': Skill.objects
+                .filter(category__exact=Skill.LANGUAGE)
+                .order_by('-level'),
+            'technical_skills': Skill.objects
+                .filter(category__exact=Skill.TECHNICAL)
+                .order_by('-level'),
+            'testimonies': Testimonial.objects.all(),
+        }
+    )

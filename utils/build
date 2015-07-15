@@ -65,7 +65,4 @@ succeed 'copy'
 # svgmin
 
 
-# <link type="text/css" rel="stylesheet" href="styles/vendor/flaTimeline.js/jquery.flatimeline.css" />
-# <script type="text/javascript" src="scripts/vendor/flaTimeline.js/jquery.flatimeline.js"></script>
-
 # tear down bower/vendor?
