@@ -1,0 +1,93 @@
+{% extends "core/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}About{% endblock %}
+
+
+{% block vendor_styles %}
+<link rel="stylesheet" href="{% static 'core/styles/vendor/bootstrap.min.css' %}" />
+<link rel="stylesheet" href="{% static 'core/styles/vendor/flat-ui.min.css' %}" />
+<link rel="stylesheet" href="{% static 'personal/styles/vendor/jquery.flatimeline-min.css' %}" />
+{% endblock %}
+
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'core/styles/main.css' %}" />
+<link rel="stylesheet" href="{% static 'personal/styles/main.css' %}" />
+{% endblock %}
+
+{% block body %}
+<h2>About Me</h2>
+
+<ul class="flaTimeline timeline">
+  {% for event in events %}
+  <li class="event" id="{{ event.name }}">
+    <div class="date">{{ event.date }}</div>
+    <div class="content">
+      <div class="title"><a href="#{{ event.name }}" class="hidden-content">{{ event.title }}</a></div>
+      <div class="text row">
+        <div class="col-xs-12">
+          {{ event.html|safe }}
+        </div>
+    {% if event.images.all.count == 1 %}
+      {% for image in event.images.all %}
+        <div class="col-xs-12">
+        {% if image.link %}
+          <a href="{{ MEDIA_URL }}{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+        {% endif %}
+            <figure>
+              <img class="img-responsive" src="{{ image.image_file.url }}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+              {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+            </figure>
+        {% if image.link %}
+          </a>
+        {% endif %}
+        </div>
+      {% endfor %}
+    {% elif event.images.all.count == 2 %}
+      {% for image in event.images.all %}
+        <div class="col-xs-12 col-sm-6">
+        {% if image.link %}
+          <a href="{{ MEDIA_URL }}{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+        {% endif %}
+            <figure>
+              <img class="img-responsive" src="{{ image.image_file.url }}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+              {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+            </figure>
+        {% if image.link %}
+          </a>
+        {% endif %}
+        </div>
+      {% endfor %}
+    {% elif event.images.all.count == 4 %}
+      {% for image in event.images.all %}
+        <div class="col-xs-6 col-md-3">
+        {% if image.link %}
+          <a href="{{ MEDIA_URL }}{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+        {% endif %}
+            <figure>
+              <img class="img-responsive" src="{{ image.image_file.url }}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+              {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+            </figure>
+        {% if image.link %}
+          </a>
+        {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+{% block vendor_scripts %}
+<script type="text/javascript" src="{% static 'core/scripts/vendor/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'core/scripts/vendor/flat-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'personal/scripts/vendor/jquery.flatimeline-min.js' %}"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+{% endblock %}
+{% block app_scripts %}
+<script type="text/javascript" src="{% static 'personal/scripts/about.js' %}"></script>
+{% endblock %}

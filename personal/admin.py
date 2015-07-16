@@ -25,7 +25,8 @@ class ImageAdmin(admin.ModelAdmin):
     """
     Administrative interface for Image model
     """
-    fields = ['title', 'alt', 'image_file', 'link']
+    fields = ['title', 'alt', 'image_file', 'link', 'credit']
+    list_display = ['title', 'alt']
 
 
 class EventAdmin(admin.ModelAdmin):
@@ -33,11 +34,11 @@ class EventAdmin(admin.ModelAdmin):
     Administrative interface for Event model
     """
     fieldsets = [
-        (None, {'fields': ['name']}),
-        ('Dates', {'fields': ['start_date', 'end_date']}),
-        ('Details', {'fields': ['description', 'html', 'images']}),
+        (None, {'fields': ['name', 'title']}),
+        ('Dates', {'fields': ['date', 'order_date']}),
+        ('Details', {'fields': ['html', 'images']}),
     ]
-    list_display = ['name', 'start_date', 'end_date']
+    list_display = ['name', 'title', 'date']
     filter_horizontal = ['images']
 
 

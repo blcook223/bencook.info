@@ -44,6 +44,9 @@ class Image(models.Model):
     link = models.ForeignKey(Link,
                              null=True,
                              blank=True)
+    credit = models.CharField(max_length=200,
+                              null=True,
+                              blank=True)
 
     def __str__(self):
         return self.title
@@ -54,11 +57,11 @@ class Event(models.Model):
     A biographical event
     """
     name = models.CharField(max_length=200)
-    start_date = models.DateField(default=timezone.now)
-    end_date = models.DateField(default=timezone.now,
-                                null=True,
-                                blank=True)
-    description = models.TextField()
+    title = models.CharField(max_length=200)
+    date = models.CharField(max_length=200)
+    order_date = models.DateField(default=timezone.now,
+                                  null=True,
+                                  blank=True)
     html = models.TextField('HTML content')
     images = models.ManyToManyField(Image)
 
@@ -66,7 +69,7 @@ class Event(models.Model):
         return self.name
 
     class Meta:
-        ordering = ('-start_date', '-end_date')
+        ordering = ('order_date',)
 
 
 class Technology(models.Model):

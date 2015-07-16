@@ -6,6 +6,7 @@ from .models import (
     Job,
     Skill,
     Testimonial,
+    Event,
 )
 
 
@@ -17,7 +18,7 @@ def index(request):
         request,
         'personal/index.html',
         {
-            'current_view': 'index'
+            'current_view': 'index',
         }
     )
 
@@ -41,7 +42,14 @@ def about(request):
     """
     Biographical information
     """
-    pass
+    return render(
+        request,
+        'personal/about.html',
+        {
+            'current_view': 'about',
+            'events': Event.objects.order_by('order_date')
+        }
+    )
 
 
 def contact(request):

@@ -51,7 +51,7 @@
   <div class="col-xs-12">
     <h3>Professional Experience</h3>
 
-      <ul class="flaTimeline timeline minimal no-toggle">
+      <ul class="flaTimeline timeline minimal">
   {% for job in jobs %}
         <li class="event">
           <div class="date">{{ job.start_date|date:'Y' }}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}</div>
