@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
+# from django.views.generic.simple import direct_to_template
+
 
 from bencook_info import settings
 
@@ -23,6 +25,10 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^blog/', include('blog.urls')),
     url(r'^', include('personal.urls')),
+    # url(r'^robots\.txt$', direct_to_template, {
+    #     'template': 'robots.txt',
+    #     'mimetype': 'text/plain',
+    # }),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
