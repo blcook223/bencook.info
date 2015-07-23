@@ -79,7 +79,9 @@ WSGI_APPLICATION = 'bencook_info.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = dj_database_url.config()
+DATABASES = {
+    'default': dj_database_url.config()
+}
 
 
 # Internationalization
