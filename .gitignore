@@ -1,11 +1,12 @@
-settings.py
 local_settings.py
 *.sqlite3
-
 media/uploaded
 node_modules
 bower_components
 vendor
+venv
+staticfiles
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
