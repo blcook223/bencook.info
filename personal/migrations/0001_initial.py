@@ -14,32 +14,33 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Event',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
-                ('start_date', models.DateField(default=django.utils.timezone.now)),
-                ('end_date', models.DateField(default=django.utils.timezone.now, blank=True, null=True)),
-                ('description', models.TextField()),
+                ('title', models.CharField(max_length=200)),
+                ('date', models.CharField(max_length=200)),
+                ('order_date', models.DateField(null=True, default=django.utils.timezone.now, blank=True)),
                 ('html', models.TextField(verbose_name='HTML content')),
             ],
             options={
-                'ordering': ('-start_date', '-end_date'),
+                'ordering': ('order_date',),
             },
         ),
         migrations.CreateModel(
             name='Image',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
-                ('title', models.CharField(blank=True, max_length=200, null=True)),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
+                ('title', models.CharField(max_length=200, null=True, blank=True)),
                 ('image_file', models.ImageField(upload_to='uploaded/personal')),
                 ('alt', models.CharField(max_length=500, verbose_name='alt text')),
+                ('credit', models.CharField(max_length=200, null=True, blank=True)),
             ],
         ),
         migrations.CreateModel(
             name='Job',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
                 ('start_date', models.DateField(default=django.utils.timezone.now)),
-                ('end_date', models.DateField(default=django.utils.timezone.now, blank=True, null=True)),
+                ('end_date', models.DateField(null=True, default=django.utils.timezone.now, blank=True)),
                 ('title', models.CharField(max_length=200)),
                 ('employer', models.CharField(max_length=200)),
             ],
@@ -50,11 +51,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Link',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
-                ('title', models.CharField(blank=True, max_length=200, null=True)),
-                ('href', models.CharField(blank=True, max_length=200, null=True, verbose_name='URL')),
-                ('text', models.CharField(blank=True, max_length=200, null=True)),
-                ('target', models.BooleanField(default=False, verbose_name='Open in new tab')),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
+                ('title', models.CharField(max_length=200, null=True, blank=True)),
+                ('href', models.CharField(max_length=200, verbose_name='URL', null=True, blank=True)),
+                ('text', models.CharField(max_length=200, null=True, blank=True)),
+                ('target', models.BooleanField(verbose_name='Open in new tab', default=False)),
             ],
             options={
                 'ordering': ('text',),
@@ -63,21 +64,21 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='OpenSourceContribution',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
                 ('link', models.ForeignKey(to='personal.Link')),
             ],
             options={
-                'ordering': ('name',),
                 'verbose_name': 'open-source contribution',
+                'ordering': ('name',),
             },
         ),
         migrations.CreateModel(
             name='Project',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
                 ('start_date', models.DateField(default=django.utils.timezone.now)),
-                ('end_date', models.DateField(default=django.utils.timezone.now, blank=True, null=True)),
+                ('end_date', models.DateField(null=True, default=django.utils.timezone.now, blank=True)),
                 ('name', models.CharField(max_length=200)),
                 ('contribution', models.CharField(max_length=200)),
                 ('description', models.TextField()),
@@ -92,9 +93,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Skill',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
-                ('category', models.CharField(default='L', choices=[('T', 'Technical'), ('P', 'Professional'), ('L', 'Language')], max_length=1)),
-                ('level', models.CharField(default='1', choices=[('1', 'Beginner (1)'), ('2', 'Intermediate (2)'), ('3', 'Competent (3)'), ('4', 'Proficient (4)'), ('5', 'Expert (5)')], max_length=1)),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
+                ('category', models.CharField(max_length=1, default='L', choices=[('T', 'Technical'), ('P', 'Professional'), ('L', 'Language')])),
+                ('level', models.CharField(max_length=1, default='1', choices=[('1', 'Beginner (1)'), ('2', 'Intermediate (2)'), ('3', 'Competent (3)'), ('4', 'Proficient (4)'), ('5', 'Expert (5)')])),
                 ('name', models.CharField(max_length=200)),
             ],
             options={
@@ -104,19 +105,19 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Technology',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
-                ('category', models.CharField(default='A', choices=[('A', 'Language'), ('B', 'Framework'), ('C', 'Database'), ('D', 'Editor'), ('E', 'Other')], max_length=1)),
+                ('category', models.CharField(max_length=1, default='A', choices=[('A', 'Language'), ('B', 'Framework'), ('C', 'Database'), ('D', 'Editor'), ('E', 'Other')])),
             ],
             options={
-                'ordering': ('category', 'name'),
                 'verbose_name_plural': 'technologies',
+                'ordering': ('category', 'name'),
             },
         ),
         migrations.CreateModel(
             name='Testimonial',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
                 ('quote', models.TextField()),
                 ('source', models.CharField(max_length=200)),
             ],
@@ -133,7 +134,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='image',
             name='link',
-            field=models.ForeignKey(blank=True, to='personal.Link', null=True),
+            field=models.ForeignKey(to='personal.Link', null=True, blank=True),
         ),
         migrations.AddField(
             model_name='event',
