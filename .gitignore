@@ -1,6 +1,5 @@
 local_settings.py
 bower_components
-media/uploaded
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
