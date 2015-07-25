@@ -38,7 +38,7 @@ class Image(models.Model):
     title = models.CharField(max_length=200,
                              null=True,
                              blank=True)
-    image_file = models.ImageField(upload_to='uploaded/personal')
+    file_path = models.CharField(max_length=200)
     alt = models.CharField('alt text',
                            max_length=500)
     link = models.ForeignKey(Link,
