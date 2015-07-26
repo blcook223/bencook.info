@@ -25,7 +25,7 @@ class ImageAdmin(admin.ModelAdmin):
     """
     Administrative interface for Image model
     """
-    fields = ['title', 'alt', 'image_file', 'link', 'credit']
+    fields = ['title', 'alt', 'file_path', 'link', 'credit']
     list_display = ['title', 'alt']
 
 
