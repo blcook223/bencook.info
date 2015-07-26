@@ -27,9 +27,9 @@
   <div class="col-xs-12 col-sm-6 {% cycle 'col-md-pull-7' '' as pull_col %} col-md-5">
     <figure>
     {% if project.first_image.link %}
-      <a href="{{ MEDIA_URL }}{{ project.first_image.link.href }}" {% if project.first_image.link.title %}title="{{ project.first_image.link.title }}"{% endif %} {% if project.first_image.link.target %}target="_blank"{% endif %}>
+      <a href="{{ project.first_image.link.href }}" {% if project.first_image.link.title %}title="{{ project.first_image.link.title }}"{% endif %} {% if project.first_image.link.target %}target="_blank"{% endif %}>
     {% endif %}
-        <img class="img-thumbnail img-responsive" src="{{ project.first_image.image_file.url }}" alt="{{ project.first_image.alt }}" {% if project.first_image.title %}title="{{ project.first_image.title }}"{% endif %}>
+        <img class="img-thumbnail img-responsive" src="{% static project.first_image.file_path %}" alt="{{ project.first_image.alt }}" {% if project.first_image.title %}title="{{ project.first_image.title }}"{% endif %}>
     {% if project.first_image.link %}
       </a>
     {% endif %}
@@ -40,7 +40,7 @@
     {% if project.second_image.link %}
       <a href="{{ project.second_image.link.href }}" {% if project.second_image.link.title %}title="{{ project.second_image.link.title }}"{% endif %} {% if project.second_image.link.target %}target="_blank"{% endif %}>
     {% endif %}
-        <img class="img-thumbnail img-responsive" src="{{ project.second_image.image_file.url }}" alt="{{ project.second_image.alt }}" {% if project.second_image.title %}title="{{ project.second_image.title }}"{% endif %}>
+        <img class="img-thumbnail img-responsive" src="{% static project.second_image.file_path %}" alt="{{ project.second_image.alt }}" {% if project.second_image.title %}title="{{ project.second_image.title }}"{% endif %}>
     {% if project.second_image.link %}
       </a>
     {% endif %}

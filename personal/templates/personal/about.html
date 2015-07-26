@@ -33,10 +33,10 @@
       {% for image in event.images.all %}
         <div class="col-xs-12">
         {% if image.link %}
-          <a href="{{ MEDIA_URL }}{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+          <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
         {% endif %}
             <figure>
-              <img class="img-responsive" src="{{ image.image_file.url }}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+              <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
               {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
             </figure>
         {% if image.link %}
@@ -48,10 +48,10 @@
       {% for image in event.images.all %}
         <div class="col-xs-12 col-sm-6">
         {% if image.link %}
-          <a href="{{ MEDIA_URL }}{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+          <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
         {% endif %}
             <figure>
-              <img class="img-responsive" src="{{ image.image_file.url }}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+              <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
               {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
             </figure>
         {% if image.link %}
@@ -63,10 +63,10 @@
       {% for image in event.images.all %}
         <div class="col-xs-6 col-md-3">
         {% if image.link %}
-          <a href="{{ MEDIA_URL }}{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+          <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
         {% endif %}
             <figure>
-              <img class="img-responsive" src="{{ image.image_file.url }}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+              <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
               {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
             </figure>
         {% if image.link %}
