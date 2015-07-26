@@ -63,7 +63,7 @@ class Event(models.Model):
                                   null=True,
                                   blank=True)
     html = models.TextField('HTML content')
-    images = models.ManyToManyField(Image)
+    images = models.ManyToManyField(Image, blank=True)
 
     def __str__(self):
         return self.name
