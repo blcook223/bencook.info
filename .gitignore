@@ -1,5 +1,11 @@
 local_settings.py
+
+node_modules
 bower_components
+bundle
+
+*.min.css
+*.min.js
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
