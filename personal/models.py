@@ -1,3 +1,7 @@
+"""
+Models for personal app
+"""
+
 from django.db import models
 from django.utils import timezone
 
@@ -24,10 +28,13 @@ class Link(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.title:
-            self.title = self.text()
+            self.title = self.text
         super(Link, self).save(*args, **kwargs)
 
     class Meta:
+        """
+        Meta class settings for Link
+        """
         ordering = ('text',)
 
 
@@ -69,6 +76,9 @@ class Event(models.Model):
         return self.name
 
     class Meta:
+        """
+        Meta class settings for Event
+        """
         ordering = ('order_date',)
 
 
@@ -98,6 +108,9 @@ class Technology(models.Model):
         return self.name
 
     class Meta:
+        """
+        Meta class settings for Technology
+        """
         ordering = ('category', 'name')
         verbose_name_plural = 'technologies'
         unique_together = (('name', 'category'),)
@@ -115,6 +128,9 @@ class OpenSourceContribution(models.Model):
         return self.name
 
     class Meta:
+        """
+        Meta class settings for OpenSourceContribution
+        """
         ordering = ('name',)
         verbose_name = 'open-source contribution'
 
@@ -144,6 +160,9 @@ class Project(models.Model):
         return self.name
 
     class Meta:
+        """
+        Meta class settings for Project
+        """
         ordering = ('-end_date', 'start_date')
 
 
@@ -183,6 +202,9 @@ class Skill(models.Model):
         return self.name
 
     class Meta:
+        """
+        Meta class settings for Skill
+        """
         ordering = ('category', 'level', 'name')
 
 
@@ -194,6 +216,9 @@ class Testimonial(models.Model):
     source = models.CharField(max_length=200)
 
     def teaser(self):
+        """
+        Return a teaser of the quote
+        """
         return self.quote[:50] + '...'
 
     def __str__(self):
@@ -215,4 +240,7 @@ class Job(models.Model):
         return '{}, {}'.format(self.title, self.employer)
 
     class Meta:
+        """
+        Meta class settings for Job
+        """
         ordering = ('-end_date', 'start_date')

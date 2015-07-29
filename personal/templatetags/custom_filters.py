@@ -1,3 +1,7 @@
+"""
+Custom filters for personal app
+"""
+
 from django import template
 
 from ..models import Skill
@@ -8,6 +12,9 @@ register = template.Library()
 
 @register.filter(name='skill_level')
 def skill_level(value):
+    """
+    Return a text representation of numeric skill level
+    """
     if value == Skill.BEGINNER:
         return 'beginner'
     elif value == Skill.INTERMEDIATE:

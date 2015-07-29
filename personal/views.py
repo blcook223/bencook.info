@@ -1,3 +1,7 @@
+"""
+Views for personal app
+"""
+
 from django.shortcuts import render
 
 from .models import (
@@ -52,11 +56,11 @@ def about(request):
     )
 
 
-def contact(request):
-    """
-    A contact form
-    """
-    pass
+# def contact(request):
+#     """
+#     A contact form
+#     """
+#     pass
 
 
 def resume(request):
@@ -69,12 +73,12 @@ def resume(request):
         {
             'current_view': 'resume',
             'jobs': Job.objects.order_by('-start_date'),
-            'languages': Skill.objects
-                .filter(category__exact=Skill.LANGUAGE)
-                .order_by('-level'),
-            'technical_skills': Skill.objects
-                .filter(category__exact=Skill.TECHNICAL)
-                .order_by('-level'),
+            'languages': Skill.objects.filter(
+                category__exact=Skill.LANGUAGE
+            ).order_by('-level'),
+            'technical_skills': Skill.objects.filter(
+                category__exact=Skill.TECHNICAL
+            ).order_by('-level'),
             'testimonies': Testimonial.objects.all(),
         }
     )

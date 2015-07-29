@@ -13,7 +13,6 @@ _VENDOR_STYLESHEETS=${_BOWER_COMPONENTS_DIR}bootstrap/dist/css/bootstrap.css\
 		    ./vendor/DanielePetrarolo/flaTimeline.js/assets/css/jquery.flatimeline.css
 
 _PROJECT_DIRS=./bencook_info\
-	      ./blog\
 	      ./core\
 	      ./personal
 
@@ -29,7 +28,7 @@ install: package.json bower.json
 
 
 lint:
-	${_NODE_MODULES_DIR}/jshint/bin/jshint .
+	${_NODE_MODULES_DIR}jshint/bin/jshint .
 	flake8 .
 	pylint ${_PROJECT_DIRS}
 

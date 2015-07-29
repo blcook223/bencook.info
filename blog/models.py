@@ -9,7 +9,7 @@ class Tag(models.Model):
     name = models.CharField(max_length=200)
 
     def save(self, *args, **kwargs):
-        short_name = name.replace(' ', '-')
+        self.short_name = self.name.replace(' ', '-')
 
     def __str__(self):
         return self.name

@@ -124,6 +124,6 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 try:
-    from bencook_info.local_settings import *
-except ImportError as e:
+    from bencook_info.local_settings import * # flake8: noqa
+except ImportError as err:
     pass

@@ -1,3 +1,7 @@
+"""
+Administrative interface for personal app
+"""
+
 from django.contrib import admin
 
 from .models import (
@@ -49,7 +53,7 @@ class JobAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['title']}),
         ('Dates', {'fields': ['start_date', 'end_date']}),
-        ('Details', {'fields': ['employer',]}),
+        ('Details', {'fields': ['employer', ]}),
     ]
     list_display = ['title', 'employer', 'start_date', 'end_date']
 
@@ -76,7 +80,12 @@ class ProjectAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['name']}),
         ('Dates', {'fields': ['start_date', 'end_date']}),
-        ('Details', {'fields': ['contribution', 'description', 'technologies', 'links']}),
+        ('Details', {'fields': [
+            'contribution',
+            'description',
+            'technologies',
+            'links'
+        ]}),
         ('Images', {'fields': ['first_image', 'second_image']})
     ]
     list_display = ['name', 'start_date', 'end_date']

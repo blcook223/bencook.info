@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-from .models import *
-
 
 def blog_home(request):
     """
