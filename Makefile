@@ -1,17 +1,17 @@
-lint:
+lint: package.json requirements.txt
 	./node_modules/jshint/bin/jshint ./
+	flake8 .
+	pylint bencook_info blog core personal
 
-# jshint
-# pylint
-# pep-8?
-# pyflakes?
+
+
 
 
 # bower install
 # concat
 # uglify
 
-# compass compile
+# cat and cssmin
 
 # htmlmin
 
