@@ -4,16 +4,9 @@
 
 {% block title %}About{% endblock %}
 
-
-{% block vendor_styles %}
-<link rel="stylesheet" href="{% static 'core/styles/vendor/bootstrap.min.css' %}" />
-<link rel="stylesheet" href="{% static 'core/styles/vendor/flat-ui.min.css' %}" />
-<link rel="stylesheet" href="{% static 'personal/styles/vendor/jquery.flatimeline-min.css' %}" />
-{% endblock %}
-
 {% block app_styles %}
-<link rel="stylesheet" href="{% static 'core/styles/main.css' %}" />
-<link rel="stylesheet" href="{% static 'personal/styles/main.css' %}" />
+<link rel="stylesheet" href="{% static 'core/styles/main.min.css' %}" />
+<link rel="stylesheet" href="{% static 'personal/styles/main.min.css' %}" />
 {% endblock %}
 
 {% block body %}
@@ -83,11 +76,9 @@
 {% endblock %}
 
 {% block vendor_scripts %}
-<script type="text/javascript" src="{% static 'core/scripts/vendor/jquery.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'core/scripts/vendor/flat-ui.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'personal/scripts/vendor/jquery.flatimeline-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'core/scripts/vendor.min.js' %}"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 {% endblock %}
 {% block app_scripts %}
-<script type="text/javascript" src="{% static 'personal/scripts/about.js' %}"></script>
+<script type="text/javascript" src="{% static 'personal/scripts/about.min.js' %}"></script>
 {% endblock %}

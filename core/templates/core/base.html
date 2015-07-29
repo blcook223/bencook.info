@@ -5,17 +5,16 @@
 <head>
   <meta charset="utf-8">
   <title>Benjamin Cook - {% block title %}{% endblock %}</title>
-  <meta name="description" content="Meet Ben Cook, versatile software development professional with experience using a range of tools and languages">
+  <meta name="description" content="Meet Benjamin Cook, versatile software development professional with experience using a range of tools and languages">
   <meta name="author" content="Benjamin Cook">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}">
 
 {% block vendor_styles %}
-  <link rel="stylesheet" href="{% static 'core/styles/vendor/bootstrap.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'core/styles/vendor/flat-ui.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/styles/vendor.min.css' %}" />
 {% endblock %}
 {% block app_styles %}
-  <link rel="stylesheet" href="{% static 'core/styles/main.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/styles/main.min.css' %}" />
 {% endblock %}
 </head>
 
@@ -32,8 +31,7 @@
   </div>
 
 {% block vendor_scripts %}
-  <script type="text/javascript" src="{% static 'core/scripts/vendor/jquery.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'core/scripts/vendor/flat-ui.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'core/scripts/vendor.min.js %}"></script>
 {% endblock %}
 {% block app_scripts %}
 {% endblock %}
