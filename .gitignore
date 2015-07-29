@@ -4,9 +4,6 @@ node_modules
 bower_components
 vendor
 
-*.min.css
-*.min.js
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
