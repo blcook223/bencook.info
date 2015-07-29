@@ -16,6 +16,7 @@ _PROJECT_DIRS=./bencook_info\
 	      ./core\
 	      ./personal
 
+
 all: install lint build
 	install
 	lint
