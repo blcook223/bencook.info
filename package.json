@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "devDependencies": {
     "concat": "^1.0.0",
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.3",
+    "imagemin": "^3.2.0",
     "jshint": "^2.8.0",
     "uglify-js": "^2.4.24"
-  },
-  "engines": {
-    "node": ">=0.10.0"
   }
 }
