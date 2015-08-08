@@ -6,11 +6,11 @@ _VIRTUALENV_NAME=bencook.info.dev
 _VENDOR_SCRIPTS=${_BOWER_COMPONENTS_DIR}jquery/dist/jquery.js\
 		${_BOWER_COMPONENTS_DIR}bootstrap/dist/js/bootstrap.js\
 		${_BOWER_COMPONENTS_DIR}flat-ui/dist/js/flat-ui.js\
-		./vendor/DanielePetrarolo/flaTimeline.js/assets/js/jquery.flatimeline.js
+		${_BOWER_COMPONENTS_DIR}jquery-flatimeline/assets/js/jquery.flatimeline.js
 
 _VENDOR_STYLESHEETS=${_BOWER_COMPONENTS_DIR}bootstrap/dist/css/bootstrap.css\
 		    ${_BOWER_COMPONENTS_DIR}flat-ui/dist/css/flat-ui.css\
-		    ./vendor/DanielePetrarolo/flaTimeline.js/assets/css/jquery.flatimeline.css
+		    ${_BOWER_COMPONENTS_DIR}jquery-flatimeline/assets/css/jquery.flatimeline.css
 
 _PROJECT_DIRS=./bencook_info\
 	      ./core\
