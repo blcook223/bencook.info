@@ -22,7 +22,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
 from bencook_info import settings
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin', include(admin.site.urls)),
     # url(r'^blog/', include('blog.urls')),
     url(r'^', include('personal.urls')),
     # url(r'^robots\.txt$', direct_to_template, {
