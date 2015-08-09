@@ -27,11 +27,13 @@ sitemaps = {
 
 
 urlpatterns = [
-    url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {
         'sitemaps': sitemaps
     }),
+    url(r'^robots\.txt$', include('robots.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('personal.urls')),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -44,7 +44,10 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'personal',
     'core',
+    'robots',
 )
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
