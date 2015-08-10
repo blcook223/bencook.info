@@ -32,6 +32,7 @@ urlpatterns = [
     }),
     url(r'^robots\.txt$', include('robots.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('core.urls')),
     url(r'^', include('personal.urls')),
 
 ]

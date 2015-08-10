@@ -49,6 +49,10 @@ INSTALLED_APPS = (
 
 SITE_ID = 1
 
+ADMIN_EMAILS = [
+    'benjamin.l.cook@gmail.com'
+]
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'unslashed.middleware.RemoveSlashMiddleware',

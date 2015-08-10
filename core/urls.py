@@ -1,0 +1,13 @@
+"""
+URL patterns for core app
+"""
+
+from django.conf.urls import url
+
+from . import views
+
+
+urlpatterns = [
+    url(r'^contact$', views.contact, name='contact'),
+    url(r'^contact/thank_you$', views.thank_you, name='thank_you'),
+]
