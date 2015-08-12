@@ -11,106 +11,107 @@
 {% endblock %}
 
 {% block body %}
-<h2>Resume</h2>
+<section>
+  <h1 class="h2">Resume</h1>
 
-<div class="row">
-  <div class="col-xs-12 col-sm-4">
-    <div class="tile">
-      <img class="tile-image big-illustration" alt="map icon" src="{% static 'personal/images/map.svg' %}">
-      <h3 class="tile-title">Experience</h3>
-      <p>Broad experience in technology, publishing, and beyond.</p>
-      <a class="btn btn-primary btn-large btn-block" href="#experience">See Experience</a>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="map icon" src="{% static 'personal/images/map.svg' %}">
+        <h3 class="tile-title">Experience</h3>
+        <p>Broad experience in technology, publishing, and beyond.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#experience">See Experience</a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="clipboard icon" src="{% static 'personal/images/clipboard.svg' %}">
+        <h3 class="tile-title">Skills</h3>
+        <p>Full-stack software development and analytical skills.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#skills">Review Skills</a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="letter icon" src="{% static 'personal/images/mail.svg' %}">
+        <h3 class="tile-title">Testimony</h3>
+        <p>Praise and evaluations from former clients and employers.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#praise">Read Praise</a>
+      </div>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-4">
-    <div class="tile">
-      <img class="tile-image big-illustration" alt="clipboard icon" src="{% static 'personal/images/clipboard.svg' %}">
-      <h3 class="tile-title">Skills</h3>
-      <p>Full-stack software development and analytical skills.</p>
-      <a class="btn btn-primary btn-large btn-block" href="#skills">Review Skills</a>
-    </div>
-  </div>
-  <div class="col-xs-12 col-sm-4">
-    <div class="tile">
-      <img class="tile-image big-illustration" alt="letter icon" src="{% static 'personal/images/mail.svg' %}">
-      <h3 class="tile-title">Testimony</h3>
-      <p>Praise and evaluations from former clients and employers.</p>
-      <a class="btn btn-primary btn-large btn-block" href="#praise">Read Praise</a>
-    </div>
-  </div>
-</div>
 
-<section class="featurette clearfix row" id="experience">
-  <div class="col-xs-12">
-    <h3>Professional Experience</h3>
+  <section class="featurette clearfix row" id="experience">
+    <div class="col-xs-12">
+      <h1 class="h3">Professional Experience</h1>
 
-      <ul class="flaTimeline timeline minimal">
-  {% for job in jobs %}
-        <li class="event">
-          <div class="date">{{ job.start_date|date:'Y' }}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}</div>
-                <div class="content">
-                  <div class="title">
-                    <p><span class="name">{{ job.title }}</span></p>
-                    <p><span class="institution">{{ job.employer }}</span></p>
-                  </div>
+        <ul class="flaTimeline timeline minimal">
+    {% for job in jobs %}
+          <li class="event">
+            <div class="date">{{ job.start_date|date:'Y' }}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}</div>
+            <div class="content">
+              <div class="title">
+                <p><span class="name">{{ job.title }}</span></p>
+                <p><span class="institution">{{ job.employer }}</span></p>
+              </div>
+            </div>
+          </li>
+    {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="featurette clearfix row" id="skills">
+    <div class="col-xs-12">
+      <h1 class="h3">Skills</h1>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h2 class="h4">Languages</h2>
+          <ul class="skill-list">
+    {% for skill in languages %}
+            <li>
+              <span class="skill-label">{{ skill.name }}</span>
+              <div class="progress">
+                <div class="progress-bar skill-progress-{{ skill.level|skill_level }}" role="progressbar" aria-valuenow="{{ skill.level|skill_level }}" aria-valuemax="expert" aria-valuemin="beginner">
+                  <span class="sr-only">{{ skill.level|skill_level }}</span>
                 </div>
-              </li>
-  {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="featurette clearfix row" id="skills">
-  <div class="col-xs-12">
-    <h3>Skills</h3>
-
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <h4>Languages</h4>
-        <ul class="skill-list">
-  {% for skill in languages %}
-          <li>
-            <span class="skill-label">{{ skill.name }}</span>
-            <div class="progress">
-              <div class="progress-bar skill-progress-{{ skill.level|skill_level }}" role="progressbar" aria-valuenow="{{ skill.level|skill_level }}" aria-valuemax="expert" aria-valuemin="beginner">
-                <span class="sr-only">{{ skill.level|skill_level }}</span>
               </div>
-            </div>
-          </li>
-  {% endfor %}
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <h4>Technical</h4>
-        <ul class="skill-list">
-  {% for skill in technical_skills %}
-          <li>
-            <span class="skill-label">{{ skill.name }}</span>
-            <div class="progress">
-              <div class="progress-bar skill-progress-{{ skill.level|skill_level }}" role="progressbar" aria-valuenow="{{ skill.level|skill_level }}" aria-valuemax="expert" aria-valuemin="beginner">
-                <span class="sr-only">{{ skill.level|skill_level }}</span>
+            </li>
+    {% endfor %}
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h2 class="h4">Technical</h2>
+          <ul class="skill-list">
+    {% for skill in technical_skills %}
+            <li>
+              <span class="skill-label">{{ skill.name }}</span>
+              <div class="progress">
+                <div class="progress-bar skill-progress-{{ skill.level|skill_level }}" role="progressbar" aria-valuenow="{{ skill.level|skill_level }}" aria-valuemax="expert" aria-valuemin="beginner">
+                  <span class="sr-only">{{ skill.level|skill_level }}</span>
+                </div>
               </div>
-            </div>
-          </li>
-  {% endfor %}
-        </ul>
+            </li>
+    {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="featurette clearfix row" id="praise">
-  <div class="col-xs-12">
-    <h3>Testimony</h3>
-  {% for testimony in testimonies %}
-            <div class="praise">
-              <blockquote>{{ testimony.quote }}</blockquote>
-              <span class="attribution">{{ testimony.source }}</span>
-            </div>
-  {% endfor %}
-  </div>
+  <section class="featurette clearfix row" id="praise">
+    <div class="col-xs-12">
+      <h1 class="h3">Testimony</h1>
+    {% for testimony in testimonies %}
+      <div class="praise">
+        <blockquote>{{ testimony.quote }}</blockquote>
+        <span class="attribution">{{ testimony.source }}</span>
+      </div>
+    {% endfor %}
+    </div>
+  </section>
 </section>
-
 {% endblock %}
 
 {% block app_scripts %}

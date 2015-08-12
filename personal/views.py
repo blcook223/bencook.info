@@ -14,19 +14,6 @@ from .models import (
 )
 
 
-def index(request):
-    """
-    Homepage of personal app and website
-    """
-    return render(
-        request,
-        'personal/index.html',
-        {
-            'current_view': 'index',
-        }
-    )
-
-
 def portfolio(request):
     """
     Selected software development projects and contributions

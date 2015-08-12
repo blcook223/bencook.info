@@ -5,7 +5,7 @@
 {% block title %}Contact me{% endblock %}
 
 {% block body %}
-<div class="row">
+<section class="row">
   <div class="col-xs-12">
     <form name="contact_form" action="{% url 'contact' %}" method="post">
         <label for="name">Name:</label>
@@ -23,6 +23,6 @@
     </form>
 
   </div>
-</div>
+</section>
 
 {% endblock %}

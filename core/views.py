@@ -10,6 +10,19 @@ from bencook_info.settings import ADMIN_EMAILS
 from .models import ContactForm
 
 
+def index(request):
+    """
+    Homepage of personal app and website
+    """
+    return render(
+        request,
+        'core/index.html',
+        {
+            'current_view': 'index',
+        }
+    )
+
+
 def contact(request):
     """
     Simple contact page for website
