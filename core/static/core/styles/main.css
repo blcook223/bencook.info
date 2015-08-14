@@ -220,3 +220,7 @@ figure.profile-figure {
     float: none;
   }
 }
+
+.field-name {
+  text-transform: capitalize;
+}

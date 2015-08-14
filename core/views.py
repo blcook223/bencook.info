@@ -3,11 +3,11 @@ Views for core app
 """
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import send_mail
 
 from bencook_info.settings import ADMIN_EMAILS
 
-from .models import ContactForm
+from .forms import ContactForm
 
 
 def index(request):
@@ -27,22 +27,25 @@ def contact(request):
     """
     Simple contact page for website
     """
-    subject = request.POST.get('subject', '')
-    message = request.POST.get('message', '')
-    from_email = request.POST.get('email', '')
-    if subject and message and from_email:
-        try:
-            send_mail(subject, message, from_email, ADMIN_EMAILS)
-        except BadHeaderError:
-            return HttpResponse('Invalid header found.')
-        return HttpResponseRedirect('/contact/thank_you')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            from_email = form.cleaned_data['email']
+            name = form.cleaned_data['name']
+            send_mail(
+                subject,
+                ' '.join(['From:', name, 'Message:', message]),
+                from_email,
+                ADMIN_EMAILS
+            )
+            return HttpResponseRedirect('/contact/thank_you')
     else:
-        return render(request, 'core/contact.html', {
-            'form': ContactForm()
-        })
+        form = ContactForm()
 
     return render(request, 'core/contact.html', {
-        'form': ContactForm()
+        'form': form
     })
 
 
