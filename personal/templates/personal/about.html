@@ -1,6 +1,7 @@
 {% extends "core/base.html" %}
 
 {% load static from staticfiles %}
+{% load custom_filters %}
 
 {% block title %}About{% endblock %}
 
@@ -11,69 +12,179 @@
 
 {% block body %}
 <section>
-  <h1 class="h2">About Me</h1>
+  <h1 class="h2">About</h1>
 
-  <ul class="flaTimeline timeline">
-    {% for event in events %}
-    <li class="event" id="{{ event.name }}">
-      <div class="date">{{ event.date }}</div>
-      <div class="content">
-        <div class="title"><a href="#{{ event.name }}" class="hidden-content">{{ event.title }}</a></div>
-        <div class="text row">
-          <div class="col-xs-12">
-            {{ event.html|safe }}
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="book icon" src="{% static 'personal/images/book.svg' %}">
+        <h3 class="tile-title">About Me</h3>
+        <p>All about me, my family, background, interests, and more.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#me">Get to Know Me</a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="map icon" src="{% static 'personal/images/map.svg' %}">
+        <h3 class="tile-title">Experience</h3>
+        <p>Broad experience in technology, publishing, and beyond.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#experience">See Experience</a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="clipboard icon" src="{% static 'personal/images/clipboard.svg' %}">
+        <h3 class="tile-title">Skills</h3>
+        <p>Full-stack software development and analytical skills.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#skills">Review Skills</a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="letter icon" src="{% static 'personal/images/mail.svg' %}">
+        <h3 class="tile-title">Testimony</h3>
+        <p>Praise and evaluations from former clients and employers.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#praise">Read Praise</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="featurette clearfix row" id="me">
+    <h1 class="h2">About Me</h1>
+
+    <ul class="flaTimeline timeline">
+      {% for event in events %}
+      <li class="event" id="{{ event.name }}">
+        <div class="date">{{ event.date }}</div>
+        <div class="content">
+          <div class="title"><a href="#{{ event.name }}" class="hidden-content">{{ event.title }}</a></div>
+          <div class="text row">
+            <div class="col-xs-12">
+              {{ event.html|safe }}
+            </div>
+        {% if event.images.all.count == 1 %}
+          {% for image in event.images.all %}
+            <div class="col-xs-12">
+            {% if image.link %}
+              <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+            {% endif %}
+                <figure>
+                  <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+                  {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+                </figure>
+            {% if image.link %}
+              </a>
+            {% endif %}
+            </div>
+          {% endfor %}
+        {% elif event.images.all.count == 2 %}
+          {% for image in event.images.all %}
+            <div class="col-xs-12 col-sm-6">
+            {% if image.link %}
+              <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+            {% endif %}
+                <figure>
+                  <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+                  {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+                </figure>
+            {% if image.link %}
+              </a>
+            {% endif %}
+            </div>
+          {% endfor %}
+        {% elif event.images.all.count == 4 %}
+          {% for image in event.images.all %}
+            <div class="col-xs-6 col-md-3">
+            {% if image.link %}
+              <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
+            {% endif %}
+                <figure>
+                  <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
+                  {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+                </figure>
+            {% if image.link %}
+              </a>
+            {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
           </div>
-      {% if event.images.all.count == 1 %}
-        {% for image in event.images.all %}
-          <div class="col-xs-12">
-          {% if image.link %}
-            <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
-          {% endif %}
-              <figure>
-                <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
-                {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
-              </figure>
-          {% if image.link %}
-            </a>
-          {% endif %}
-          </div>
-        {% endfor %}
-      {% elif event.images.all.count == 2 %}
-        {% for image in event.images.all %}
-          <div class="col-xs-12 col-sm-6">
-          {% if image.link %}
-            <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
-          {% endif %}
-              <figure>
-                <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
-                {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
-              </figure>
-          {% if image.link %}
-            </a>
-          {% endif %}
-          </div>
-        {% endfor %}
-      {% elif event.images.all.count == 4 %}
-        {% for image in event.images.all %}
-          <div class="col-xs-6 col-md-3">
-          {% if image.link %}
-            <a href="{{ image.link.href }}" {% if image.link.title %}title="{{ image.link.title }}"{% endif %} {% if image.link.target %}target="_blank"{% endif %}>
-          {% endif %}
-              <figure>
-                <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
-                {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
-              </figure>
-          {% if image.link %}
-            </a>
-          {% endif %}
-          </div>
-        {% endfor %}
-      {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="featurette clearfix row" id="experience">
+    <div class="col-xs-12">
+      <h1 class="h3">Professional Experience</h1>
+
+        <ul class="flaTimeline timeline minimal style-only">
+    {% for job in jobs %}
+          <li class="event">
+            <div class="date">{{ job.start_date|date:'Y' }}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}</div>
+            <div class="content">
+              <div class="title">
+                <p><span class="name">{{ job.title }}</span></p>
+                <p><span class="institution">{{ job.employer }}</span></p>
+              </div>
+            </div>
+          </li>
+    {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="featurette clearfix row" id="skills">
+    <div class="col-xs-12">
+      <h1 class="h3">Skills</h1>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h2 class="h4">Languages</h2>
+          <ul class="skill-list">
+    {% for skill in languages %}
+            <li>
+              <span class="skill-label">{{ skill.name }}</span>
+              <div class="progress">
+                <div class="progress-bar skill-progress-{{ skill.level|skill_level }}" role="progressbar" aria-valuenow="{{ skill.level|skill_level }}" aria-valuemax="expert" aria-valuemin="beginner">
+                  <span class="sr-only">{{ skill.level|skill_level }}</span>
+                </div>
+              </div>
+            </li>
+    {% endfor %}
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h2 class="h4">Technical</h2>
+          <ul class="skill-list">
+    {% for skill in technical_skills %}
+            <li>
+              <span class="skill-label">{{ skill.name }}</span>
+              <div class="progress">
+                <div class="progress-bar skill-progress-{{ skill.level|skill_level }}" role="progressbar" aria-valuenow="{{ skill.level|skill_level }}" aria-valuemax="expert" aria-valuemin="beginner">
+                  <span class="sr-only">{{ skill.level|skill_level }}</span>
+                </div>
+              </div>
+            </li>
+    {% endfor %}
+          </ul>
         </div>
       </div>
-    </li>
+    </div>
+  </section>
+
+  <section class="featurette clearfix row" id="praise">
+    <div class="col-xs-12">
+      <h1 class="h3">Testimony</h1>
+    {% for testimony in testimonies %}
+      <div class="praise">
+        <blockquote>{{ testimony.quote }}</blockquote>
+        <span class="attribution">{{ testimony.source }}</span>
+      </div>
     {% endfor %}
-  </ul>
+    </div>
+  </section>
 </section>
 {% endblock %}
 
@@ -81,6 +192,7 @@
 <script type="text/javascript" src="{% static 'core/scripts/vendor.min.js' %}"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 {% endblock %}
+
 {% block app_scripts %}
 <script type="text/javascript" src="{% static 'personal/scripts/about.min.js' %}"></script>
 {% endblock %}

@@ -40,7 +40,6 @@ build: ${_VENDOR_SCRIPTS} ${_VENDOR_STYLESHEETS}
 	rm -f ./core/static/core/scripts/tmp.vendor.js
 
 	${_NODE_MODULES_DIR}.bin/uglifyjs -cm -- ./personal/static/personal/scripts/about.js > ./personal/static/personal/scripts/about.min.js 2> /dev/null
-	${_NODE_MODULES_DIR}.bin/uglifyjs -cm -- ./personal/static/personal/scripts/resume.js > ./personal/static/personal/scripts/resume.min.js 2> /dev/null
 
 	cat ${_VENDOR_STYLESHEETS} > ./core/static/core/styles/tmp.vendor.css
 	${_NODE_MODULES_DIR}.bin/minify --output ./core/static/core/styles/vendor.min.css ./core/static/core/styles/tmp.vendor.css

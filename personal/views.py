@@ -38,27 +38,7 @@ def about(request):
         'personal/about.html',
         {
             'current_view': 'about',
-            'events': Event.objects.order_by('order_date')
-        }
-    )
-
-
-# def contact(request):
-#     """
-#     A contact form
-#     """
-#     pass
-
-
-def resume(request):
-    """
-    Professional experience, education, and skills
-    """
-    return render(
-        request,
-        'personal/resume.html',
-        {
-            'current_view': 'resume',
+            'events': Event.objects.order_by('order_date'),
             'jobs': Job.objects.order_by('-start_date'),
             'languages': Skill.objects.filter(
                 category__exact=Skill.LANGUAGE

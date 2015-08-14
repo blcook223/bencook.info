@@ -4,13 +4,17 @@
   var CUSTOM_MAPTYPE_ID = 'custom_map',
       MAP_HUE = '#C0392B',
       mapCanvas = document.getElementById('fwMap'),
-      timelines = $('ul.flaTimeline'),
+      timelines = $('ul.flaTimeline:not(.style-only)'),
       linkedEvent,
       locations,
       labels,
       customMapType,
       featureOptions,
       map;
+
+  $('ul.flaTimeline.style-only').flaTimeline({
+    toggle: false
+  });
 
   if (timelines.length) {
     if (mapCanvas) {

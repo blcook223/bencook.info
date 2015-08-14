@@ -45,7 +45,8 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'core/contact.html', {
-        'form': form
+        'form': form,
+        'current_view': 'contact'
     })
 
 

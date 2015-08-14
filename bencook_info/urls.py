@@ -22,7 +22,7 @@ from core.sitemaps import PagesSitemap
 
 
 sitemaps = {
-    'pages': PagesSitemap(('index', 'about', 'portfolio', 'resume'))
+    'pages': PagesSitemap(('index', 'about', 'portfolio', 'contact'))
 }
 
 
