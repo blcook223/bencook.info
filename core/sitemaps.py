@@ -1,3 +1,7 @@
+"""
+Sitemaps for bencook.info
+"""
+
 from django.contrib.sitemaps import Sitemap
 from django.core.urlresolvers import reverse
 

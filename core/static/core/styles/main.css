@@ -208,3 +208,15 @@ footer .legal > p {
 .tile {
   background-color: #FFFFFF;
 }
+
+figure.profile-figure {
+  max-width: 158px;
+  float: left;
+  margin: 30px 30px 15px 0;
+}
+@media (max-width: 410px) {
+  figure.profile-figure {
+    margin: 0 auto;
+    float: none;
+  }
+}
