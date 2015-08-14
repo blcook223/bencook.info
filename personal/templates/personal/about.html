@@ -25,18 +25,18 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="tile">
-        <img class="tile-image big-illustration" alt="map icon" src="{% static 'personal/images/map.svg' %}">
-        <h3 class="tile-title">Experience</h3>
-        <p>Broad experience in technology, publishing, and beyond.</p>
-        <a class="btn btn-primary btn-large btn-block" href="#experience">See Experience</a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="tile">
         <img class="tile-image big-illustration" alt="clipboard icon" src="{% static 'personal/images/clipboard.svg' %}">
         <h3 class="tile-title">Skills</h3>
         <p>Full-stack software development and analytical skills.</p>
         <a class="btn btn-primary btn-large btn-block" href="#skills">Review Skills</a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="tile">
+        <img class="tile-image big-illustration" alt="map icon" src="{% static 'personal/images/map.svg' %}">
+        <h3 class="tile-title">Experience</h3>
+        <p>Broad experience in technology, publishing, and beyond.</p>
+        <a class="btn btn-primary btn-large btn-block" href="#experience">See Experience</a>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
@@ -115,26 +115,6 @@
     </ul>
   </section>
 
-  <section class="featurette clearfix row" id="experience">
-    <div class="col-xs-12">
-      <h1 class="h3">Professional Experience</h1>
-
-        <ul class="flaTimeline timeline minimal style-only">
-    {% for job in jobs %}
-          <li class="event">
-            <div class="date">{{ job.start_date|date:'Y' }}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}</div>
-            <div class="content">
-              <div class="title">
-                <p><span class="name">{{ job.title }}</span></p>
-                <p><span class="institution">{{ job.employer }}</span></p>
-              </div>
-            </div>
-          </li>
-    {% endfor %}
-      </ul>
-    </div>
-  </section>
-
   <section class="featurette clearfix row" id="skills">
     <div class="col-xs-12">
       <h1 class="h3">Skills</h1>
@@ -171,6 +151,26 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="featurette clearfix row" id="experience">
+    <div class="col-xs-12">
+      <h1 class="h3">Professional Experience</h1>
+
+        <ul class="flaTimeline timeline minimal style-only">
+    {% for job in jobs %}
+          <li class="event">
+            <div class="date">{{ job.start_date|date:'Y' }}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}</div>
+            <div class="content">
+              <div class="title">
+                <p><span class="name">{{ job.title }}</span></p>
+                <p><span class="institution">{{ job.employer }}</span></p>
+              </div>
+            </div>
+          </li>
+    {% endfor %}
+      </ul>
     </div>
   </section>
 
