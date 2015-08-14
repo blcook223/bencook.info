@@ -8,7 +8,7 @@
 <section class="row">
   <div class="col-xs-12">
     <h1 class="h3">Contact me</h1>
-    <form name="contact_form" action="{% url 'contact' %}" method="post" class="form-horizontal">
+    <form name="contact_form" action="{% url 'contact' %}" method="post" class="form-horizontal" novalidate>
     {% if form.errors %}
         {% for field, errors in form.errors.items %}
             {% for error in errors %}
