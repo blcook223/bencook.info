@@ -9,7 +9,7 @@ def blog_home(request):
         request,
         'blog/blog_home.html',
         {
-
+            'current_view': 'blog'
         }
     )
 
@@ -22,7 +22,7 @@ def tags(request, tag=None):
         request,
         'blog/tags.html',
         {
-
+            'current_view': 'blog'
         }
     )
 
@@ -35,6 +35,6 @@ def post(request, short_title):
         request,
         'blog/post.html',
         {
-
+            'current_view': 'blog'
         }
     )
