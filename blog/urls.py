@@ -4,7 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^tags(?:/(?P<tag>[\w\-]+))?/$', views.tags, name='tags'),
-    url(r'^(?P<short_title>[\w\-]+)/$', views.post, name='post'),
-    url(r'^$', views.blog_home, name='blog_home'),
+    url(r'^tag(?:/(?P<slug>[\d\_\w-]+))?/$', views.tag, name='tag'),
+    url(r'^(?P<slug>[\w-\_\d]+)/$', views.post, name='post'),
+    url(r'^$', views.blog_home, name='blog'),
 ]
