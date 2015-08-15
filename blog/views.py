@@ -1,4 +1,9 @@
-from django.shortcuts import render
+"""
+Views for blog app
+"""
+from django.shortcuts import render, get_object_or_404
+
+from .models import Post, Tag
 
 
 def blog_home(request):
@@ -9,12 +14,14 @@ def blog_home(request):
         request,
         'blog/blog_home.html',
         {
-            'current_view': 'blog'
+            'current_view': 'blog',
+            'tags': Tag.objects.all(),
+            'posts': Post.objects.order_by('date')[:5],
         }
     )
 
 
-def tags(request, tag=None):
+def tag(request, slug):
     """
     Index of posts organized by tag
     """
@@ -22,12 +29,14 @@ def tags(request, tag=None):
         request,
         'blog/tags.html',
         {
-            'current_view': 'blog'
+            'current_view': 'blog',
+            'tag': get_object_or_404(Tag, slug=slug),
+            'posts': Post.objects.filter(tags__slug=slug),
         }
     )
 
 
-def post(request, short_title):
+def post(request, slug):
     """
     A blog post, identified by title
     """
@@ -35,6 +44,7 @@ def post(request, short_title):
         request,
         'blog/post.html',
         {
-            'current_view': 'blog'
+            'current_view': 'blog',
+            'post': get_object_or_404(Post, slug=slug),
         }
     )

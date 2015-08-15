@@ -1,3 +1,5 @@
+from markdown import markdown
+
 from django.db import models
 from django.core.urlresolvers import reverse
 
@@ -8,9 +10,6 @@ class Tag(models.Model):
     """
     slug = models.CharField(max_length=200, unique=True)
     name = models.SlugField(max_length=200, unique=True)
-
-    def save(self, *args, **kwargs):
-        self.slug = self.name.replace(' ', '-')[:50]
 
     def __str__(self):
         return self.name
@@ -35,14 +34,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        self.slug = self.title.replace(' ', '-')[:50]
-
     def get_absolute_url(self):
         return reverse('post', args=(self.slug,))
 
     def teaser(self):
-        return self.body[:100]
+        return ' '.join([self.body[:100], '...'])
+
+    def body_html( self ):
+        return markdown(self.body)
 
     class Meta:
         ordering = ('title', 'date', 'body')

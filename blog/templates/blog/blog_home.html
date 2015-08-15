@@ -1,1 +1,41 @@
-blog home
+{% extends "core/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}Blog{% endblock %}
+
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'core/styles/main.min.css' %}" />
+<!-- TODO: add blog styles -->
+{% endblock %}
+
+{% block body %}
+<section>
+  <h1 class="h2">Blog</h1>
+
+  <div class="row">
+    <section class="col-xs-12 col-md-8">
+  {% for post in posts %}
+      <a href="{% url 'post' slug=post.slug %}">
+        <h1 class="h3">{{ post.title }}</h1>
+        <p>{{ post.date }}</p>
+        <p>{{ post.teaser }}</p>
+        <ul>
+    {% for tag in post.tags.all %}
+          <li><a href="{% url 'tag' slug=tag.slug %}">{{ tag.name }}</a></li>
+    {% endfor %}
+        </ul>
+      </a>
+  {% endfor %}
+    </section>
+
+    <section class="col-xs-12 col-md-4">
+      <h1 class="h3">Browse by Topic</h1>
+  {% for tag in tags %}
+      <a href="{% url 'tag' slug=tag.slug %}">{{ tag.name }}</a>
+  {% endfor %}
+    </section>
+  </div>
+
+</section>
+{% endblock %}

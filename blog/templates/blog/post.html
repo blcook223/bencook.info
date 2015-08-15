@@ -1,1 +1,30 @@
-post
+{% extends "core/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'core/styles/main.min.css' %}" />
+<!-- TODO: add blog styles -->
+{% endblock %}
+
+{% block body %}
+<section>
+  <article>
+    <h1 class="h2">{{ post.title }}</h1>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <span>{{ post.date }}</span>
+        <ul>
+  {% for tag in post.tags.all %}
+          <li><a href="{% url 'tag' slug=tag.slug %}">{{ tag.name }}</a></li>
+  {% endfor %}
+        </ul>
+        {{ post.body_html }}
+      </div>
+    </div>
+  </article>
+</section>
+{% endblock %}

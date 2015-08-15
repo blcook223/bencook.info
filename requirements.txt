@@ -10,6 +10,7 @@ flake8==2.4.1
 futures==3.0.3
 gunicorn==19.3.0
 logilab-common==1.0.2
+Markdown==2.6.2
 mccabe==0.3.1
 pep8==1.5.7
 psycopg2==2.6.1
