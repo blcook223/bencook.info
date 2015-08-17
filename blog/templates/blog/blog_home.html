@@ -14,7 +14,17 @@
   <h1 class="h2">Blog</h1>
 
   <div class="row">
-    <section class="col-xs-12 col-md-8">
+    <section class="col-xs-12 col-md-3 col-md-push-9 sidebar">
+  {% include 'blog/sidebar_profile.html' %}
+      <section>
+        <h1 class="h3">Browse by Topic</h1>
+  {% for tag in tags %}
+        <a href="{% url 'tag' slug=tag.slug %}">{{ tag.name }}</a>
+  {% endfor %}
+      </section>
+    </section>
+
+    <section class="col-xs-12 col-md-9 col-md-pull-3">
   {% for post in posts %}
       <a href="{% url 'post' slug=post.slug %}">
         <h1 class="h3">{{ post.title }}</h1>
@@ -26,13 +36,6 @@
     {% endfor %}
         </ul>
       </a>
-  {% endfor %}
-    </section>
-
-    <section class="col-xs-12 col-md-4">
-      <h1 class="h3">Browse by Topic</h1>
-  {% for tag in tags %}
-      <a href="{% url 'tag' slug=tag.slug %}">{{ tag.name }}</a>
   {% endfor %}
     </section>
   </div>

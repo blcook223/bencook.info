@@ -1,0 +1,11 @@
+<section>
+  <h1 class="h3">Recent Posts</h1>
+{% for post in recent_posts %}
+  <a href="{% url 'post' slug=post.slug %}">
+    <h2 class="h4">{{ post.title }}</h2>
+    <p>{{ post.date }}</p>
+    <p>{{ post.teaser }}</p>
+  </a>
+{% endfor %}
+</section>
+

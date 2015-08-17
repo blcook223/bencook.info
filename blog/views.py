@@ -32,6 +32,7 @@ def tag(request, slug):
             'current_view': 'blog',
             'tag': get_object_or_404(Tag, slug=slug),
             'posts': Post.objects.filter(tags__slug=slug),
+            'recent_posts': Post.objects.order_by('date')[:5],
         }
     )
 
@@ -46,5 +47,6 @@ def post(request, slug):
         {
             'current_view': 'blog',
             'post': get_object_or_404(Post, slug=slug),
+            'recent_posts': Post.objects.order_by('date')[:5],
         }
     )
