@@ -70,7 +70,7 @@
             {% endif %}
                 <figure>
                   <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
-                  {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+                  {% if image.credit %}<figcaption class="photo-credit">&copy; {{ image.credit }}</figcaption>{% endif %}
                 </figure>
             {% if image.link %}
               </a>
@@ -85,7 +85,7 @@
             {% endif %}
                 <figure>
                   <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
-                  {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+                  {% if image.credit %}<figcaption class="photo-credit">&copy; {{ image.credit }}</figcaption>{% endif %}
                 </figure>
             {% if image.link %}
               </a>
@@ -100,7 +100,7 @@
             {% endif %}
                 <figure>
                   <img class="img-responsive" src="{% static image.file_path %}" alt="{{ image.alt }}" {% if image.title %}title="{{ image.title }}"{% endif %}>
-                  {% if image.credit %}<figcaption class="photo-credit">{{ image.credit }}</figcaption>{% endif %}
+                  {% if image.credit %}<figcaption class="photo-credit">&copy; {{ image.credit }}</figcaption>{% endif %}
                 </figure>
             {% if image.link %}
               </a>
@@ -161,7 +161,7 @@
         <ul class="flaTimeline timeline minimal style-only">
     {% for job in jobs %}
           <li class="event">
-            <div class="date">{{ job.start_date|date:'Y' }}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}</div>
+            <div class="date">{{ job.start_date|date:'Y' }}{% if job.end_date == False or job.end_date|date:'Y' != job.start_date|date:'Y' %}-{% if job.end_date %}{{ job.end_date|date:'Y' }}{% else %}Present{% endif %}{% endif %}</div>
             <div class="content">
               <div class="title">
                 <p><span class="name">{{ job.title }}</span></p>
