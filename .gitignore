@@ -1,5 +1,6 @@
 local_settings.py
 
+.sass-cache
 node_modules
 bower_components
 vendor
