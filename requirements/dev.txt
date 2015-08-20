@@ -1,7 +1,8 @@
-astroid=1.3.7
-flake8=2.4.1
-futures=3.0.3
-mccabe=0.3.1
-pep8=1.5.7
-pyflakes=0.8.1
-pylint=1.4.4:
+-r prod.txt
+astroid==1.3.8
+flake8==2.4.1
+logilab-common==1.0.2
+mccabe==0.3.1
+pep8==1.5.7
+pyflakes==0.8.1
+pylint==1.4.4
