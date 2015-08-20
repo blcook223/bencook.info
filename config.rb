@@ -15,4 +15,5 @@ add_import_path 'bower_components'
 asset_cache_buster = :none
 
 http_path = '/'
-sass_dir = 'sass'
+sass_dir = 'static/styles/src'
+css_dir = 'static/styles'
