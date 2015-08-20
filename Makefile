@@ -1,8 +1,6 @@
 _BOWER_COMPONENTS_DIR=./bower_components/
 _NODE_MODULES_DIR=./node_modules/
 
-_VIRTUALENV_NAME=bencook.info.dev
-
 _VENDOR_SCRIPTS=${_BOWER_COMPONENTS_DIR}jquery/dist/jquery.js\
 		${_BOWER_COMPONENTS_DIR}bootstrap/dist/js/bootstrap.js\
 		${_BOWER_COMPONENTS_DIR}flat-ui/dist/js/flat-ui.js\
@@ -14,7 +12,8 @@ _VENDOR_STYLESHEETS=${_BOWER_COMPONENTS_DIR}bootstrap/dist/css/bootstrap.css\
 
 _PROJECT_DIRS=./bencook_info\
 	      ./core\
-	      ./personal
+	      ./personal\
+	      ./blog
 
 
 all: install lint build
@@ -23,9 +22,10 @@ all: install lint build
 	build
 
 
-install: package.json bower.json
+install: package.json bower.json Gemfile
 	npm install
 	bower install
+	bundle install
 
 
 lint:
