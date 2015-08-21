@@ -16,24 +16,28 @@ _PROJECT_DIRS=./bencook_info\
 	      ./blog
 
 
+.PHONY: all
 all: install lint build
 	install
 	lint
 	build
 
 
+.PHONY: install
 install: package.json bower.json Gemfile
 	npm install
 	bower install
 	bundle install
 
 
+.PHONY: lint
 lint:
 	${_NODE_MODULES_DIR}jshint/bin/jshint .
 	flake8 .
 	pylint ${_PROJECT_DIRS}
 
 
+.PHONY: build
 build: ${_VENDOR_SCRIPTS} ${_VENDOR_STYLESHEETS}
 	cat ${_VENDOR_SCRIPTS} > ./core/static/core/scripts/tmp.vendor.js
 	${_NODE_MODULES_DIR}.bin/uglifyjs -cm -- ./core/static/core/scripts/tmp.vendor.js > ./core/static/core/scripts/vendor.min.js 2> /dev/null
@@ -47,3 +51,8 @@ build: ${_VENDOR_SCRIPTS} ${_VENDOR_STYLESHEETS}
 
 	${_NODE_MODULES_DIR}.bin/minify --output ./core/static/core/styles/main.min.css ./core/static/core/styles/main.css
 	${_NODE_MODULES_DIR}.bin/minify --output ./personal/static/personal/styles/main.min.css ./personal/static/personal/styles/main.css
+
+
+.PHONY: watch
+watch: config.rb
+	bundle exec compass watch
