@@ -40,9 +40,13 @@
   text-transform: uppercase;
   font-size: 14px;
 }
-.timeline .contentWrapper .content .text {
+.timeline:not(.style-only) .contentWrapper .content .text {
   cursor: pointer;
 }
+ul.flaTimeline.style-only li.event .contentWrapper .content .title {
+  cursor: default;
+}
+
 .timeline .contentWrapper .content .text div[class^="col"] {
   padding: 0 15px 15px 15px;
 }

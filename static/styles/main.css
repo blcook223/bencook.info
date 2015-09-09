@@ -377,8 +377,12 @@ figure.profile-figure {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000343}}
-.timeline .contentWrapper .content .text {
+.timeline:not(.style-only) .contentWrapper .content .text {
   cursor: pointer;
+}
+
+ul.flaTimeline.style-only li.event .contentWrapper .content .title {
+  cursor: default;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000346}}
