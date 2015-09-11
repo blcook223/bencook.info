@@ -5,6 +5,7 @@ node_modules
 bower_components
 vendor
 bundle
+.bundle/config
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
