@@ -10,6 +10,9 @@ _VENDOR_STYLESHEETS=${_BOWER_COMPONENTS_DIR}bootstrap/dist/css/bootstrap.css\
 		    ${_BOWER_COMPONENTS_DIR}flat-ui/dist/css/flat-ui.css\
 		    ${_BOWER_COMPONENTS_DIR}jquery-flatimeline/assets/css/jquery.flatimeline.css
 
+_VENDOR_FONTS=${_BOWER_COMPONENTS_DIR}bootstrap/dist/fonts/*\
+	      ${_BOWER_COMPONENTS_DIR}flat-ui/dist/fonts/*
+
 _PROJECT_DIRS=./bencook_info\
 	      ./core\
 	      ./personal\
@@ -45,12 +48,13 @@ build: ${_VENDOR_SCRIPTS} ${_VENDOR_STYLESHEETS}
 
 	${_NODE_MODULES_DIR}.bin/uglifyjs -cm -- ./personal/static/personal/scripts/about.js > ./personal/static/personal/scripts/about.min.js 2> /dev/null
 
-	cat ${_VENDOR_STYLESHEETS} > ./core/static/core/styles/tmp.vendor.css
-	${_NODE_MODULES_DIR}.bin/minify --output ./core/static/core/styles/vendor.min.css ./core/static/core/styles/tmp.vendor.css
-	rm -f ./core/static/core/styles/tmp.vendor.css
+	cat ${_VENDOR_STYLESHEETS} > ./static/styles/tmp.vendor.css
+	${_NODE_MODULES_DIR}.bin/minify --output ./static/styles/vendor.min.css ./static/styles/tmp.vendor.css
+	rm -f ./static/styles/tmp.vendor.css
 
-	${_NODE_MODULES_DIR}.bin/minify --output ./core/static/core/styles/main.min.css ./core/static/core/styles/main.css
-	${_NODE_MODULES_DIR}.bin/minify --output ./personal/static/personal/styles/main.min.css ./personal/static/personal/styles/main.css
+	cp -r ${_VENDOR_FONTS} ./static/fonts/
+
+	bundle exec compass compile -e production --force
 
 
 .PHONY: watch
