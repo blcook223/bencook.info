@@ -1,0 +1,36 @@
+// colors
+
+$light-contrast-color: #FFFFFF;
+$secondary-light-contrast-color: #ECF0F1;
+$highlight-color: #E67E22;
+$dark-highlight-color: #D34500;
+$primary-theme-color: #1ABC9C;
+$dark-primary-theme-color: #16A085;
+$light-primary-theme-color: #34495E;
+$dark-contrast-color: #2C3E50;
+$secondary-theme-color: #E74C3C;
+$dark-secondary-theme-color: #C0392B;
+
+// breakpoints
+
+$screen-xxs-max: 410px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+
+// layout
+
+$footer-height: 52px;
+
+// transitions
+
+$default-transition-duration: 0.25s;
+$default-transition: all $default-transition-duration ease 0s;
+
+// borders
+
+$border-color: #BDC3C7;
+$primary-border: 5px solid $border-color;

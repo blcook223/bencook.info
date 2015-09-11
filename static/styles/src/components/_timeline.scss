@@ -1,0 +1,99 @@
+// !important overrides flaTimeline.js programmaticly applied styles
+
+.timeline {
+  margin: 40px 0;
+  border-top: $primary-border !important;
+
+  .date {
+    min-width: 200px;
+  }
+
+  .contentWrapper {
+    border-left: $primary-border !important;
+
+    .circle {
+      border: $primary-border !important;
+    }
+
+    .content {
+
+      background-color: $primary-theme-color !important;
+      border-color: $dark-primary-theme-color !important;
+      transition: $default-transition;
+      padding: 0 !important;
+
+      ul {
+        list-style-type: disc;
+      }
+
+      .title {
+        padding: 20px !important;
+
+        a {
+          color: white;
+
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+          }
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .name {
+          font-size: 20px;
+          font-style: italic;
+        }
+        .institution {
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+      }
+
+      .text {
+        cursor: pointer;
+
+        div[class^="col"] {
+          padding: 0 15px 15px 15px;
+        }
+      }
+
+      &:hover {
+        transition: $default-transition;
+        background-color: $dark-primary-theme-color !important;
+        border-color: darken($dark-primary-theme-color, 10%) !important;
+      }
+    }
+  }
+
+  &.no-toggle {
+    .date, .circle {
+      cursor: default !important;
+    }
+
+    .content {
+      .title {
+        cursor: default !important;
+      }
+    }
+  }
+
+  &.minimal {
+    .content {
+      background-color: transparent !important;
+      border-color: transparent !important;
+      color: $dark-contrast-color !important;
+
+      &:not(.opened):hover {
+        background-color: transparent !important;
+        border-color: transparent !important;
+      }
+
+      .title {
+        color: $dark-contrast-color;
+        margin-left: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.featurette {
+  padding: 20px 0;
+  border-top: $primary-border;
+
+  &:first-of-type {
+    margin-top: 40px;
+  }
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  figure {
+    margin: 10px 0;
+  }
+
+  // p {
+  //   font-weight: bold;
+  // }
+  .info-label {
+    font-weight: bold;
+  }
+}

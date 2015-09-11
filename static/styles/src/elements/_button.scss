@@ -1,0 +1,23 @@
+.btn {
+  font-size:  18px;
+}
+
+.btn-primary {
+  background-color: $primary-theme-color;
+  color: $light-contrast-color;
+  border-color: $dark-contrast-color;
+
+  &:hover, &:focus {
+    background-color: $dark-primary-theme-color;
+  }
+}
+
+.btn-secondary {
+  background-color: $dark-secondary-theme-color;
+  color: $light-contrast-color;
+  border-color: $dark-contrast-color;
+
+  &:hover, &:focus {
+    background-color: $secondary-theme-color;
+  }
+}

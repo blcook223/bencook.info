@@ -1,0 +1,28 @@
+.brand {
+  text-transform: capitalize;
+  padding: 14px 9px;
+
+  &:hover:not(.btn),
+  &:active:not(.btn),
+  &:focus:not(.btn),
+  &.active:not(.btn) {
+    text-decoration: none;
+  }
+
+  .title {
+    color: $light-contrast-color;
+    font-size: 20px;
+    margin: 0 5px;
+
+    &:before, &:after {
+      color: $highlight-color;
+      margin: 0 5px;
+    }
+    &:before {
+      content: "{{";
+    }
+    &:after {
+      content: "}}";
+    }
+  }
+}

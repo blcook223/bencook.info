@@ -1,0 +1,25 @@
+a:not(.btn):not(.brand) {
+  color: $dark-secondary-theme-color;
+
+  &:active, &:hover, &:focus {
+    color: $dark-secondary-theme-color;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $dark-highlight-color;
+  }
+}
+
+footer a:not(.btn):not(.brand),
+footer a:not(.btn):not(.brand):visited {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:not(.btn):not(.brand):active,
+footer a:not(.btn):not(.brand):focus,
+footer a:not(.btn):not(.brand):hover {
+  color: $secondary-light-contrast-color;
+  text-decoration: underline;
+}

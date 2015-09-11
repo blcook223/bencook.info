@@ -1,0 +1,75 @@
+.navbar {
+  border: none;
+  background-color: $primary-theme-color;
+  border-radius: 0;
+  margin-bottom: 0;
+
+  .navbar-toggle {
+    border: none;
+    border-radius: 0;
+    transition: $default-transition;
+    margin-left: 0;
+
+    &:before {
+      transition: $default-transition;
+    }
+    &:not(.collapsed) {
+      background-color: $light-primary-theme-color;
+
+      &:before {
+        background-color: $light-primary-theme-color;
+        color: $light-contrast-color;
+      }
+    }
+
+    &.collapsed {
+      background-color: $primary-theme-color;
+
+      &:before {
+        color: $light-contrast-color;
+        background-color: $primary-theme-color;
+      }
+      &:hover, &:focus, &:active {
+        background-color: $dark-primary-theme-color;
+
+        &:before {
+          color: $light-contrast-color;
+          background-color: $dark-primary-theme-color;
+        }
+      }
+    }
+  }
+
+  .navbar-nav {
+
+    > li {
+
+      > a {
+        color: $light-contrast-color;
+
+        &:hover, &:focus, &:visited {
+          color: $light-contrast-color;
+          background-color: $dark-primary-theme-color;
+          text-decoration: none;
+        }
+      }
+
+      &.active > a {
+        color: $light-contrast-color;
+        background-color: $dark-contrast-color;
+
+        &:hover, &:focus, &:visited {
+          color: $light-contrast-color;
+          background-color: $dark-contrast-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .navbar-collapse {
+      overflow-x: hidden;
+    }
+  }
+}

@@ -1,577 +1,521 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/base\/_layout\.scss}line{font-family:\000031}}
 html, body {
   height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/base\/_layout\.scss}line{font-family:\000035}}
 .body {
   margin: 10px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/base\/_typography\.scss}line{font-family:\000031}}
 body {
   color: #2C3E50;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_anchor\.scss}line{font-family:\000031}}
 a:not(.btn):not(.brand) {
   color: #C0392B;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_anchor\.scss}line{font-family:\000034}}
 a:not(.btn):not(.brand):active, a:not(.btn):not(.brand):hover, a:not(.btn):not(.brand):focus {
   color: #C0392B;
   text-decoration: underline;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_anchor\.scss}line{font-family:\000039}}
 a:not(.btn):not(.brand):visited {
   color: #D34500;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_anchor\.scss}line{font-family:\0000314}}
+footer a:not(.btn):not(.brand),
+footer a:not(.btn):not(.brand):visited {
+  color: white;
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_anchor\.scss}line{font-family:\0000320}}
+footer a:not(.btn):not(.brand):active,
+footer a:not(.btn):not(.brand):focus,
+footer a:not(.btn):not(.brand):hover {
+  color: #ECF0F1;
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_figure\.scss}line{font-family:\000033}}
 figure .photo-credit {
   text-align: right;
   font-size: 10px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_figure\.scss}line{font-family:\000038}}
+figure.profile-figure {
+  max-width: 158px;
+  float: left;
+  margin: 30px 30px 15px 0;
+}
+@media (max-width: 410px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_figure\.scss}line{font-family:\000038}}
+  figure.profile-figure {
+    margin: 0 auto;
+    float: none;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_button\.scss}line{font-family:\000031}}
 .btn {
   font-size: 18px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_button\.scss}line{font-family:\000035}}
 .btn-primary {
   background-color: #1ABC9C;
   color: #FFFFFF;
   border-color: #2C3E50;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_button\.scss}line{font-family:\0000310}}
 .btn-primary:hover, .btn-primary:focus {
   background-color: #16A085;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_button\.scss}line{font-family:\0000315}}
 .btn-secondary {
   background-color: #C0392B;
   color: #FFFFFF;
   border-color: #2C3E50;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/elements\/_button\.scss}line{font-family:\0000320}}
 .btn-secondary:hover, .btn-secondary:focus {
   background-color: #E74C3C;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_brand\.scss}line{font-family:\000031}}
 .brand {
   text-transform: capitalize;
   padding: 14px 9px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_brand\.scss}line{font-family:\000035}}
 .brand:hover:not(.btn), .brand:active:not(.btn), .brand:focus:not(.btn), .brand.active:not(.btn) {
   text-decoration: none;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_brand\.scss}line{font-family:\0000312}}
 .brand .title {
   color: #FFFFFF;
   font-size: 20px;
   margin: 0 5px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_brand\.scss}line{font-family:\0000317}}
 .brand .title:before, .brand .title:after {
   color: #E67E22;
   margin: 0 5px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_brand\.scss}line{font-family:\0000321}}
 .brand .title:before {
   content: "{{";
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_brand\.scss}line{font-family:\0000324}}
 .brand .title:after {
   content: "}}";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\000031}}
 .navbar {
   border: none;
   background-color: #1ABC9C;
   border-radius: 0;
   margin-bottom: 0;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\000037}}
 .navbar .navbar-toggle {
   border: none;
   border-radius: 0;
   transition: all 0.25s ease 0s;
   margin-left: 0;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000313}}
 .navbar .navbar-toggle:before {
   transition: all 0.25s ease 0s;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000316}}
 .navbar .navbar-toggle:not(.collapsed) {
   background-color: #34495E;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000319}}
 .navbar .navbar-toggle:not(.collapsed):before {
   background-color: #34495E;
   color: #FFFFFF;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000325}}
 .navbar .navbar-toggle.collapsed {
   background-color: #1ABC9C;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000328}}
 .navbar .navbar-toggle.collapsed:before {
   color: #FFFFFF;
   background-color: #1ABC9C;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000332}}
 .navbar .navbar-toggle.collapsed:hover, .navbar .navbar-toggle.collapsed:focus, .navbar .navbar-toggle.collapsed:active {
   background-color: #16A085;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000335}}
 .navbar .navbar-toggle.collapsed:hover:before, .navbar .navbar-toggle.collapsed:focus:before, .navbar .navbar-toggle.collapsed:active:before {
   color: #FFFFFF;
   background-color: #16A085;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000347}}
 .navbar .navbar-nav > li > a {
   color: #FFFFFF;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000350}}
 .navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus, .navbar .navbar-nav > li > a:visited {
   color: #FFFFFF;
   background-color: #16A085;
   text-decoration: none;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000357}}
 .navbar .navbar-nav > li.active > a {
   color: #FFFFFF;
   background-color: #2C3E50;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000361}}
 .navbar .navbar-nav > li.active > a:hover, .navbar .navbar-nav > li.active > a:focus, .navbar .navbar-nav > li.active > a:visited {
   color: #FFFFFF;
   background-color: #2C3E50;
   text-decoration: none;
 }
-
 @media (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_navbar\.scss}line{font-family:\0000371}}
   .navbar .navbar-collapse {
     overflow-x: hidden;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003133}}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_jumbotron\.scss}line{font-family:\000031}}
 .container .jumbotron {
   background-color: transparent;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_jumbotron\.scss}line{font-family:\000034}}
 .container .jumbotron p {
   font-weight: normal;
 }
-
 @media (min-width: 992px) and (max-width: 1199px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_jumbotron\.scss}line{font-family:\000031}}
   .container .jumbotron {
     padding: 0 15px;
   }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_jumbotron\.scss}line{font-family:\0000311}}
   .container .jumbotron .h1 {
     margin-top: 10px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003148}}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_footer\.scss}line{font-family:\000031}}
 footer .footer-main, footer .footer-sidebar {
   height: 52px;
   color: #FFFFFF;
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_footer\.scss}line{font-family:\000039}}
 footer .footer-main {
   background-color: #1ABC9C;
 }
-
 @media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_footer\.scss}line{font-family:\000039}}
   footer .footer-main {
     margin-right: -15px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003162}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_footer\.scss}line{font-family:\0000318}}
 footer .footer-sidebar {
   background-color: #2C3E50;
 }
-
 @media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_footer\.scss}line{font-family:\0000318}}
   footer .footer-sidebar {
     margin-left: -15px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_footer\.scss}line{font-family:\0000328}}
 footer .legal {
   position: absolute;
   bottom: 5px;
   left: 15px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_footer\.scss}line{font-family:\0000333}}
 footer .legal > p {
   font-size: 10px;
   line-height: 1.2em;
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_media-icon\.scss}line{font-family:\000031}}
 .media-icon-group {
   padding: 10px 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_media-icon\.scss}line{font-family:\000037}}
 .media-icon-group .media-icon:not(:last-child) {
   margin-right: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_featurette\.scss}line{font-family:\000031}}
 .featurette {
   padding: 20px 0;
   border-top: 5px solid #BDC3C7;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_featurette\.scss}line{font-family:\000035}}
 .featurette:first-of-type {
   margin-top: 40px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_featurette\.scss}line{font-family:\000038}}
 .featurette:last-of-type {
   margin-bottom: 40px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003201}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_featurette\.scss}line{font-family:\0000312}}
 .featurette figure {
   margin: 10px 0;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_featurette\.scss}line{font-family:\0000319}}
 .featurette .info-label {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003208}}
-.tile {
-  background-color: #FFFFFF;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003212}}
-figure.profile-figure {
-  max-width: 158px;
-  float: left;
-  margin: 30px 30px 15px 0;
-}
-
-@media (max-width: 410px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003218}}
-  figure.profile-figure {
-    margin: 0 auto;
-    float: none;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/core\/static\/core\/styles\/_core\.scss}line{font-family:\00003224}}
-.field-name {
-  text-transform: capitalize;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\000033}}
 .timeline {
   margin: 40px 0;
   border-top: 5px solid #BDC3C7 !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\000037}}
 .timeline .date {
   min-width: 200px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000311}}
 .timeline .contentWrapper {
   border-left: 5px solid #BDC3C7 !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000314}}
 .timeline .contentWrapper .circle {
   border: 5px solid #BDC3C7 !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000318}}
 .timeline .contentWrapper .content {
   background-color: #1ABC9C !important;
   border-color: #16A085 !important;
   transition: all 0.25s ease 0s;
   padding: 0 !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000325}}
 .timeline .contentWrapper .content ul {
   list-style-type: disc;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000329}}
 .timeline .contentWrapper .content .title {
   padding: 20px !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000332}}
 .timeline .contentWrapper .content .title a {
   color: white;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000335}}
 .timeline .contentWrapper .content .title a:hover, .timeline .contentWrapper .content .title a:focus, .timeline .contentWrapper .content .title a:active {
   text-decoration: none;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000340}}
 .timeline .contentWrapper .content .title p {
   margin-bottom: 0;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000344}}
 .timeline .contentWrapper .content .title .name {
   font-size: 20px;
   font-style: italic;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000348}}
 .timeline .contentWrapper .content .title .institution {
   text-transform: uppercase;
   font-size: 14px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000343}}
-.timeline:not(.style-only) .contentWrapper .content .text {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000354}}
+.timeline .contentWrapper .content .text {
   cursor: pointer;
 }
-
-ul.flaTimeline.style-only li.event .contentWrapper .content .title {
-  cursor: default;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000357}}
 .timeline .contentWrapper .content .text div[class^="col"] {
   padding: 0 15px 15px 15px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000362}}
 .timeline .contentWrapper .content:hover {
   transition: all 0.25s ease 0s;
   background-color: #16A085 !important;
   border-color: #107360 !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000371}}
 .timeline.no-toggle .date, .timeline.no-toggle .circle {
   cursor: default !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000376}}
 .timeline.no-toggle .content .title {
   cursor: default !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000383}}
 .timeline.minimal .content {
   background-color: transparent !important;
   border-color: transparent !important;
   color: #2C3E50 !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000388}}
 .timeline.minimal .content:not(.opened):hover {
   background-color: transparent !important;
   border-color: transparent !important;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_timeline\.scss}line{font-family:\0000393}}
 .timeline.minimal .content .title {
   color: #2C3E50;
   margin-left: 30px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_map\.scss}line{font-family:\000031}}
 .google-map {
   width: 100%;
   height: 400px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_map\.scss}line{font-family:\000035}}
 .google-map .gm-style-iw {
   color: #2C3E50;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_tile\.scss}line{font-family:\000031}}
+.tile {
+  background-color: #FFFFFF;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\000031}}
 .skill-list {
   list-style-type: none;
   padding: 10px 20px 0 20px;
 }
-
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\000031}}
   .skill-list {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000310}}
 .skill-list > li {
   clear: both;
   overflow: hidden;
   margin-bottom: 8px;
   position: relative;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000317}}
 .skill-list .skill-label {
   width: calc(45% - 5px);
   float: left;
   line-height: 1;
 }
-
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000317}}
   .skill-list .skill-label {
     text-align: right;
     width: 120px;
   }
 }
 @media (min-width: 992px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000317}}
   .skill-list .skill-label {
     width: calc(35% - 5px);
   }
 }
 @media (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000317}}
   .skill-list .skill-label {
     width: calc(30% - 5px);
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000333}}
 .skill-list .progress {
   background-color: #BDC3C7;
   width: calc(55% - 5px);
   float: right;
   margin: 5px 0;
 }
-
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000333}}
   .skill-list .progress {
     width: calc(100% - 140px);
   }
 }
 @media (min-width: 992px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000333}}
   .skill-list .progress {
     width: calc(65% - 5px);
   }
 }
 @media (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000333}}
   .skill-list .progress {
     width: calc(70% - 5px);
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000349}}
 .skill-list .progress .progress-bar {
   background-color: #1ABC9C;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000351}}
 .skill-list .progress .progress-bar.skill-progress-expert {
   width: 100%;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000352}}
 .skill-list .progress .progress-bar.skill-progress-proficient {
   width: 80%;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000353}}
 .skill-list .progress .progress-bar.skill-progress-competent {
   width: 60%;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000354}}
 .skill-list .progress .progress-bar.skill-progress-intermediate {
   width: 40%;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_skill-list\.scss}line{font-family:\0000355}}
 .skill-list .progress .progress-bar.skill-progress-beginner {
   width: 20%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\000031}}
 .praise blockquote:before, .praise blockquote:after {
   position: absolute;
   top: -35px;
   font-size: 132px;
   color: #E67E22;
 }
-
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\000031}}
   .praise blockquote:before, .praise blockquote:after {
     font-size: 96px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003171}}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000312}}
 .praise {
   padding: 40px 120px;
 }
-
 @media (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000312}}
   .praise {
     padding: 40px 60px;
   }
 }
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000312}}
   .praise {
     padding: 40px 15px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000322}}
 .praise blockquote {
   text-align: center;
   font-size: 24px;
@@ -579,47 +523,43 @@ ul.flaTimeline.style-only li.event .contentWrapper .content .title {
   padding: 0 80px;
   position: relative;
 }
-
 @media (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000322}}
   .praise blockquote {
     padding: 0 60px;
   }
 }
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000322}}
   .praise blockquote {
     font-size: 18px;
     padding: 0 35px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000337}}
 .praise blockquote:before {
   left: 0;
   content: "\201C";
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003206}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000342}}
 .praise blockquote:after {
   right: 0;
   content: "\201D";
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000349}}
 .praise .attribution {
   text-align: center;
   display: block;
   font-size: 24px;
   font-style: italic;
 }
-
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003217}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000349}}
   .praise .attribution {
     font-size: 18px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/personal\/static\/personal\/styles\/_personal\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/blcook\/projects\/bencook\.info\/code\/bencook\.info\/static\/styles\/src\/components\/_praise\.scss}line{font-family:\0000359}}
 .praise .attribution:before {
   content: "\2014";
   margin-right: 3px;
