@@ -31,7 +31,7 @@ class DomainRedirectMiddleware(object):
             return None
 
         new_uri = '%s://%s%s%s' % (
-                request.is_secure() and 'https' or 'http',
+                'http',
                 site.domain,
                 urlquote(request.path),
                 (request.method == 'GET' and len(request.GET) > 0) and
