@@ -10,9 +10,10 @@ _VENDOR_STYLESHEETS=${_BOWER_COMPONENTS_DIR}bootstrap/dist/css/bootstrap.css\
 		    ${_BOWER_COMPONENTS_DIR}flat-ui/dist/css/flat-ui.css\
 		    ${_BOWER_COMPONENTS_DIR}jquery-flatimeline/assets/css/jquery.flatimeline.css
 
-_VENDOR_FILES=${_BOWER_COMPONENTS_DIR}bootstrap/dist/fonts/*\
-	      ${_BOWER_COMPONENTS_DIR}flat-ui/dist/img/*\
+_VENDOR_FONTS=${_BOWER_COMPONENTS_DIR}bootstrap/dist/fonts/*\
 	      ${_BOWER_COMPONENTS_DIR}flat-ui/dist/fonts/*
+
+_VENDOR_IMAGES=${_BOWER_COMPONENTS_DIR}flat-ui/dist/img/*
 
 _PROJECT_DIRS=./bencook_info\
 	      ./core\
@@ -53,7 +54,8 @@ build: ${_VENDOR_SCRIPTS} ${_VENDOR_STYLESHEETS}
 	${_NODE_MODULES_DIR}.bin/minify --output ./static/styles/vendor.min.css ./static/styles/tmp.vendor.css
 	rm -f ./static/styles/tmp.vendor.css
 
-	cp -r ${_VENDOR_FILES} ./static/fonts/
+	cp -r ${_VENDOR_FONTS} ./static/fonts/
+	cp -r ${_VENDOR_IMAGES} ./static/img/
 
 	bundle exec compass compile -e production --force
 
