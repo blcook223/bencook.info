@@ -33,9 +33,9 @@ def date_cmp(item1, item2):
     if item2.end_date < item1.end_date:
         return -1
     if item1.start_date < item2.start_date:
-        return -1
-    if item2.start_date < item1.start_date:
         return 1
+    if item2.start_date < item1.start_date:
+        return -1
     return 0
 
 
