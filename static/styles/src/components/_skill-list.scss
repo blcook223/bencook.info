@@ -1,4 +1,7 @@
 .skill-list {
+  // list-style-type: none;
+  padding: 10px 20px 0 20px;
+
   @media (max-width: $screen-xs-max) {
     padding-left: 10px;
     padding-right: 10px;
@@ -6,26 +9,26 @@
 
   > li {
     clear: both;
-    overflow: hidden;
+    // overflow: hidden;
     margin-bottom: 8px;
     position: relative;
   }
 
   .skill-label {
-    width: calc(45% - 5px);
+    // width: calc(45% - 5px);
     float: left;
     line-height: 1;
 
-    @media (max-width: $screen-xs-max) {
-      text-align: right;
-      width: 120px;
-    }
-    @media (min-width: $screen-md-min) {
-      width: calc(35% - 5px);
-    }
-    @media (min-width: $screen-lg-min) {
-      width: calc(30% - 5px);
-    }
+    // @media (max-width: $screen-xs-max) {
+    //   text-align: right;
+    //   width: 120px;
+    // }
+    // @media (min-width: $screen-md-min) {
+    //   width: calc(35% - 5px);
+    // }
+    // @media (min-width: $screen-lg-min) {
+    //   width: calc(30% - 5px);
+    // }
   }
   .progress {
     background-color: $border-color;
