@@ -74,7 +74,7 @@ def portfolio(request):
         'personal/portfolio.html',
         {
             'current_view': 'portfolio',
-            'projects': sorted(Project.objects.all(), key=start_end_key(date_cmp)),
+            'projects': Project.objects.all(),
             'open_source_contribs': OpenSourceContribution.objects.all(),
         }
     )
