@@ -173,10 +173,14 @@ class Skill(models.Model):
     TECHNICAL = 'T'
     PROFESSIONAL = 'P'
     LANGUAGE = 'L'
+    DATABASE = 'D'
+    DEV_TOOL = 'V'
     CATEGORY_CHOICES = (
         (TECHNICAL, 'Technical'),
         (PROFESSIONAL, 'Professional'),
-        (LANGUAGE, 'Language')
+        (LANGUAGE, 'Language'),
+        (DATABASE, 'Database'),
+        (DEV_TOOL, 'Development Tool')
     )
     BEGINNER = '1'
     INTERMEDIATE = '2'
