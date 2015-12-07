@@ -99,10 +99,10 @@ def about(request):
             ).order_by('-level'),
             'development_tools': Skill.objects.filter(
                 category__exact=Skill.DEV_TOOL
-            ).order_by('-level')
+            ).order_by('-level'),
             'databases': Skill.objects.filter(
                 category__exact=Skill.DATABASE
-            ).order_by('-level')
+            ).order_by('-level'),
             'testimonies': Testimonial.objects.all(),
         }
     )
