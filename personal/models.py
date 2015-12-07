@@ -154,6 +154,7 @@ class Project(models.Model):
     second_image = models.ForeignKey(Image,
                                      related_name='second_project_image',
                                      null=True)
+    priority = models.IntegerField(default=500)
 
     def __str__(self):
         return self.name
@@ -162,7 +163,7 @@ class Project(models.Model):
         """
         Meta class settings for Project
         """
-        ordering = ('-end_date', 'start_date')
+        ordering = ('-priority',)
 
 
 class Skill(models.Model):
