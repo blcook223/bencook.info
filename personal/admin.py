@@ -78,7 +78,7 @@ class ProjectAdmin(admin.ModelAdmin):
     Administrative interface for Project model
     """
     fieldsets = [
-        (None, {'fields': ['name']}),
+        (None, {'fields': ['name', 'priority']}),
         ('Dates', {'fields': ['start_date', 'end_date']}),
         ('Details', {'fields': [
             'contribution',
