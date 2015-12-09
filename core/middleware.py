@@ -7,6 +7,7 @@ from django.http import HttpResponsePermanentRedirect
 from django.core.urlresolvers import resolve
 from django.core import urlresolvers
 from django.utils.http import urlquote
+from django.conf import settings
 
 
 # http://eikke.com/django-domain-redirect-middleware/
@@ -19,6 +20,9 @@ class DomainRedirectMiddleware(object):
         """
         Return permanent redirect to correct domain.
         """
+        if settings.DEBUG:
+            return None
+
         host = request.get_host()
         site = Site.objects.get_current()
 
