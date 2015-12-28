@@ -5,8 +5,8 @@
 {% block title %}Contact me{% endblock %}
 
 {% block body %}
-<section class="row">
-  <div class="col-xs-12">
+<div class="row">
+  <section class="col-lg-8">
     <h1 class="h3">Contact me</h1>
     <form name="contact_form" action="{% url 'contact' %}" method="post" class="form-horizontal" novalidate>
     {% if form.errors %}
@@ -50,8 +50,18 @@
 
   {% csrf_token %}
     </form>
+  </section>
 
-  </div>
-</section>
+  <section class="col-lg-4">
+    <h1 class="h3">Connect with me</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/benjaminleecook/">LinkedIn</a></li>
+      <li><a href="https://github.com/blcook223">GitHub</a></li>
+      <li><a href="http://stackoverflow.com/users/4513644/blcook223">Stack Overflow</a></li>
+    </ul>
+
+  </section>
+
+</div>
 
 {% endblock %}
