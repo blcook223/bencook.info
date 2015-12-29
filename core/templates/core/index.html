@@ -6,13 +6,7 @@
 
 {% block body %}
 <div class="row">
-  <div class="hidden-xs hidden-sm col-md-5">
-    <figure class="primary-figure">
-      <img class="img-responsive" src="{% static 'core/images/professional_photo.jpg' %}" alt="Professional photo of Benjamin Cook" title="Benjamin Cook">
-      <figcaption class="photo-credit">&copy; Ryan Miller</figcaption>
-    </figure>
-  </div>
-  <div class="col-xs-12 col-md-7">
+  <div class="col-xs-12 col-md-push-5 col-md-7">
     <section class="jumbotron">
      <figure class="visible-xs visible-sm profile-figure">
         <img class="img-responsive img-circle" src="{% static 'core/images/profile_photo.jpg' %}" alt="Profile photo of Benjamin Cook" title="Benjamin Cook">
@@ -25,6 +19,12 @@
       <p>I have an <a href="{% url 'about' %}#son">amazing family</a>, and I love <a href="{% url 'about' %}#greece">all things ancient</a>.</p>
       <a class="btn btn-primary" href="{% url 'about' %}">Learn more about me</a>
     </section>
+  </div>
+  <div class="hidden-xs hidden-sm col-md-pull-7 col-md-5">
+    <figure class="primary-figure">
+      <img class="img-responsive" src="{% static 'core/images/professional_photo.jpg' %}" alt="Professional photo of Benjamin Cook" title="Benjamin Cook">
+      <figcaption class="photo-credit">&copy; Ryan Miller</figcaption>
+    </figure>
   </div>
 </div>
 {% endblock %}
