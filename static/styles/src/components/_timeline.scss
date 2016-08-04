@@ -97,3 +97,8 @@
     }
   }
 }
+
+ul.flaTimeline.minimal li.event .contentWrapper .content .title,
+ul.flaTimeline.minimal li.event .date {
+  cursor: default;
+}
