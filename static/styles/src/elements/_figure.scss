@@ -16,3 +16,14 @@ figure {
     }
   }
 }
+
+.primary-figure {
+  .photo-credit {
+    position: relative;
+    top: -15px;
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      right: -10px;
+    }
+  }
+}
