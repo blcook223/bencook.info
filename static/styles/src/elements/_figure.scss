@@ -3,6 +3,10 @@ figure {
   .photo-credit {
     text-align: right;
     font-size: 10px;
+
+    @media (max-width: $screen-md-max) {
+      top: -25px;
+    }
   }
 
   &.profile-figure {
