@@ -15,4 +15,8 @@
       font-size: 18px;
     }
   }
+
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 10px;
+  }
 }
