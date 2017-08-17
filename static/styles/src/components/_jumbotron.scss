@@ -16,7 +16,7 @@
     }
   }
 
-  @media (max-width: $screen-md-max) {
+  @media (min-width: $screen-lg-min) {
     margin-bottom: 10px;
   }
 }
