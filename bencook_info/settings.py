@@ -140,6 +140,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('SENDGRID_USERNAME', '')
 EMAIL_HOST_PASSWORD = os.getenv('SENDGRID_PASSWORD', '')
 
+SECURE_SSL_REDIRECT = True
+
 try:
     from bencook_info.local_settings import * # flake8: noqa
 except ImportError as err:
