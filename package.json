@@ -1,7 +1,10 @@
 {
   "name": "bencook.info",
   "version": "0.0.0",
+  "repository": "https://github.com/blcook223/bencook.info",
+  "license": "UNLICENSED",
   "devDependencies": {
+    "imagemin-cli": "^3.0.0",
     "jshint": "^2.8.0",
     "minifier": "^0.7.0",
     "uglify-js": "^2.4.24"
